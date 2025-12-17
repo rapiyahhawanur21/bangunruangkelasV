@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beranda | Bangun Ruang</title>
+    <link rel="stylesheet" href="Style/materi.css.css" />
+    <link rel="stylesheet" href="bootstrap/css/Bootstrap.min.css" />
+    <link rel="stylesheet" href="fontawesome-free-6.5.2-web/css/all.css" />
+    <style>
+      @media screen and (max-width: 280px) {
+        .navbar-brand {
+          font-size: 0.8rem !important;
+        }
+        .navbar-brand-icon img {
+          width: 15px !important;
+        }
+        .keluar {
+          font-size: 0.75rem !important;
+        }
+        .home {
+          margin-left: 0 !important;
+        }
+        .sb-topnav .navbar-brand {
+          width: auto;
+        }
+        .pagination a {
+          padding: 0.25rem !important ;
+          font-size: 0.5rem !important ;
+        }
+        body,
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .fs-5 {
+          font-size: 15px !important;
+        }
+        .form-check-label {
+          font-size: 10px;
+        }
+      }
+      @media screen and (max-width: 700px) {
+        .navbar-brand {
+          font-size: 1.075rem;
+        }
+        .keluar {
+          padding: 0.25rem;
+          font-size: 1rem;
+        }
+        .home {
+          margin-left: 0 !important;
+        }
+        .sb-topnav .navbar-brand {
+          width: auto;
+        }
+        .pagination a {
+          padding: 0.25rem !important ;
+          font-size: 0.75rem;
+        }
+        .img1 {
+          width: 50% !important;
+        }
+      }
+
+      .warna-success {
+      border: 2px solid green;
+    }
+  
+    .warna-danger {
+      border: 2px solid red;
+    }
+    </style>
+  </head>
+
+  <body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand navbar-dark" style="background-color: #81A263">
+      <!-- Navbar Brand-->
+      <a class="navbar-brand d-flex px-1" href="Halamanutama.html">
+        <div class="navbar-brand-icon">
+          <img src="Img/logo5.png" style="width: 25px" />
+        </div>
+        <div class="navbar-brand-text px-1 fw-bold">Bangun Ruang</div>
+      </a>
+      <!-- Sidebar Toggle-->
+      <button class="home btn btn-link btn-sm order-1 order-lg-0 ms-5 me-lg-0" id="sidebarToggle" href="#!"><i class="text-white fa-solid fa-bars"></i></button>
+      <div class="ms-auto me-1">
+        <button class="keluar btn btn-danger shadow" id="logout" onclick="btnLogout()">Keluar<i class="fa-solid fa-right-from-bracket ms-2"></i></button>
+      </div>
+    </nav>
+
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+          <nav class="sb-sidenav accordion sb-sidenav-light" id="sidenavAccordion">
+            <div class="sb-sidenav-menu">
+              <div class="m-2 text-center">
+                <img src="Img/user.png" class="w-50" />
+                <h5 class="mt-2"><span id="userlink">User</span></h5>
+                <hr />
+              </div>
+
+              <div class="nav">
+                <a class="nav-link collapsed active" href="#" data-bs-toggle="collapse" data-bs-target="#collapseSubtema1" aria-expanded="false" aria-controls="collapseMateri1">
+                  <div class="sb-nav-link-icon"><i class="fa-regular fa-file-lines"></i></div>
+                  Materi 1
+                  <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                </a>
+                <div class="collapse show" id="collapseSubtema1" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                  <nav class="sb-sidenav-menu-nested nav">
+                    <a id="materi_1" class="nav-link" href="materi1.html">Materi 1</a>
+                  <a id="materi_2" class="nav-link " href="m1-1.html">Bangun Ruang</a>
+                  <a id="materi_3" class="nav-link active" href="M1-2.html">Prisma</a>
+                  <a id="materi_3" class="nav-link" href="M1-3.html">Tabung</a>
+                  <a id="materi_4" class="nav-link" href="Kuis/Kuis1.1.html">Kuis 1</a>
+                </nav>
+              </div>
+  
+                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseSubtema2" aria-expanded="false" aria-controls="collapseMateri2">
+                  <div class="sb-nav-link-icon"><i class="fa-regular fa-file-lines"></i></div>
+                  Materi 2
+                  <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                </a>
+                <div class="collapse" id="collapseSubtema2" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                  <nav class="sb-sidenav-menu-nested sb-sidenav-lightnav">
+                    <a id="materi_5" class="nav-link" onclick="materi2()">Materi 2</a>
+                    <a id="materi_6" class="nav-link" onclick="materi3()">Sketsa</a>
+                    <a id="materi_7" class="nav-link" onclick="materi4()">Jaring-jaring</a>
+                    <a id="materi_8" class="nav-link" onclick="kuis2()">Kuis 2</a>
+                  </nav>
+                </div>
+  
+                <a id="materi_9" class="nav-link" onclick="evaluasi()">
+                  <div class="sb-nav-link-icon"><i class="fa-solid fa-file-pen"></i></div>
+                  Evaluasi
+                </a>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div id="layoutSidenav_content">
+          <main>
+            <div class="container-fluid px-4 mb-4">
+              <h2 class="mt-4"> Materi 1: Prisma</h2>
+              <div class="row border px-4">
+                <div id="satu">
+                  <div class="card my-4 px-0">
+                    <div class="mx-3 fs-5" style="text-align: justify">
+                      <p>Apa itu bangun ruang prisma? Ayo, amati sifat-sifat bangun ruang prisma!</p>
+                      <img class="img1" src="Img/logo10.png" style="width: 20%" />
+                      <p>Pada aktivitas ini, kalian akan mempelajari tentang prisma. Kita akan memperhatikan bagaimana prisma memiliki bidang-bidang yang memiliki sifat khusus.</p>
+                    </div>
+                    
+                    <div class="card mx-3">
+                      <div class="fs-5">
+                        <div class="row mx-3">
+                          <div class="mb-3">
+                            <p style="color: #01060a"><b>Intruksi  dan Petunjuk pengerjaan</b></p>
+                            <ol>
+                              <li>Amati dengan seksama gambar-gambar prisma yang tersedia</li> 
+                              <li>Perhatikan bidang yang berwarna pada masing-masing gambar. Perhatikan bangun ruang yang mempunyai bidang yang sejajar berikut</li> 
+                              <li>Jawablah pertanyaan yang diberikan.</li>
+                              <li>Jawablah Kotak kosong dibawah ini dengan diawali huruf besar lalui di ikuti huruf kecil</li>
+                              <img class="rounded mx-auto d-block img1" src="Img/foto12.PNG" style="width: 50%" />
+                            </ol>
+                            <b>Pertanyaan:</b><br>
+                            <div class="conso" >
+                              <div class="submateri analisisC" id="submateri">
+                                <form name="form">
+                                  <div class="isian">
+                                    <ol>
+                                      <li>
+                                        Bentuk bangun ruang pada bidang sejajar yang berwarna adalah
+                                        <div class="mencoba1_1">
+                                            <table>
+                                                <tr>
+                                                    <td>Bidang  <i>A</i> berbentuk</td>
+                                                    <td class="p-2">
+                                                    <input type="text" id="mencoba1_1" class="text-center" placeholder=". . .">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                  <td>Bidang  <i>B</i> berbentuk</td>
+                                                    <td class="p-2">
+                                                        <input type="text" id="mencoba1_2" class="text-center"placeholder=". . .">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                  <td>Bidang <i>C</i> berbentuk</td>
+                                                  <td class="p-2">
+                                                    <input type="text" id="mencoba1_3" class="text-center"
+                                                        placeholder=". . .">
+                                                </td>
+                                                </tr>
+                                                <tr>
+                                                  <td>Bidang <i>D</i> berbentuk</td>
+                                                  <td class="p-2">
+                                                    <input type="text" id="mencoba1_4" class="text-center"
+                                                        placeholder=". . .">
+                                                </td>
+                                                </tr>
+                                            </table>
+                                            </div>
+                                    </li>
+                                  </ol>  
+                                    <li>
+                                      Bentuk bangun ruang yang tidak berwarna dan berapa jumlahnya
+                                      <div class="2">
+                                          <div class="jawab">
+                                            <td>Bidang  <i>A</i> berbentuk</td>
+                                              <input type="text" id="mencoba2_1" class="text-center" placeholder=". . ."> ada 
+                                              <input type="text" id="mencoba2_2" class="text-center" placeholder=". . .">  
+                                          </div>
+                                          <div class="jawab2 mt-2">
+                                            <td>Bidang  <i>B</i> berbentuk</td>
+                                              <input type="text" id="mencoba2_3" class="text-center" placeholder=". . ."> ada 
+                                              <input type="text" id="mencoba2_4" class="text-center" placeholder=". . .">
+                                          </div>
+                                          <div class="jawab2 mt-2">
+                                            <td>Bidang  <i>C</i> berbentuk</td>
+                                              <input type="text" id="mencoba2_5" class="text-center" placeholder=". . ."> ada 
+                                              <input type="text" id="mencoba2_6" class="text-center" placeholder=". . .">
+                                          </div>
+                                          <div class="jawab2 mt-2">
+                                            <td>Bidang  <i>D</i> berbentuk</td>
+                                              <input type="text" id="mencoba2_7" class="text-center" placeholder=". . ."> ada 
+                                              <input type="text" id="mencoba2_8" class="text-center" placeholder=". . .">
+                                          </div>
+                                        </div>
+                                  </li>
+
+                                    <div class="mt-2">
+                                      <a type="button" class="btn btn-success text-white"
+                                          onclick="cekmencoba1_1()"><i class="fa fa-check"></i> Cek
+                                          Jawaban</a>
+                                      <input type="reset" name="submit" onclick="ulang()" value="Ulang" class="cek tombolhp" id="ulangi">
+                                  </div>
+                                  <div id="ketmencoba1_1"></div>
+                                   </div>
+                                  </ol>
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>            
+                <div id="dua">
+                  <div class="card my-4 px-0">
+                    <div class="mx-3 fs-5" style="text-align: justify">
+                      <img class="img1" src="Img/logo9.png" style="width: 20%" />
+                      <img class="rounded mx-auto d-block img1" src="Img/foto12.PNG" style="width: 50%" />
+                    </div>
+                    <div class="mx-3 fs-5" style="text-align: justify">
+                      <p>Bangun ruang seperti A, B, C, D disebut <b>prisma.</b> Prisma ialah bangun ruang yang mempunyai dua bidang yang sejajar dan kongruen. </p>
+                      <ul>
+                        <li><b>Sisi</b> adalah bidang yang membatasi bangun ruang.</li>
+                        <li><b>Sisi alas </b> adalah kedua bidang yang kongruen dan sejajar dari prisma.</li>
+                        <li><b>Sisi tegak </b>adalah bidang segiempat yang mengitari alas.</li>
+                        <li><b>Rusuk </b>adalah garis yang merupakan   dari dua sisi bangun ruang</li>
+                        <li><b>Titik sudut </b>adalah titik pertemuan dari tiga buah rusuk pada bangun ruang.</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="card my-4 px-0">
+                    <div class="card-header" style="background-color: #89aa6b">
+                      <p class="fs-5 fw-bold my-0 text-white">Prisma Segitiga</p>
+                    </div>
+                    <div class="mx-3 fs-5"> 
+                      <div class="penjelasanku mt-3" style="text-align: justify">
+                        <p class="fs-5">Prisma segitiga adalah sebuah bangun ruang yang memiliki sisi alas dan sisi atas yang ukurannya sama (kongruen) berbentuk segitiga.
+                          Berapa banyak sisi prisma segitiga? Prisma segitiga memiliki 5 sisi yang terdiri dari satu sisi alas, satu sisi atas, dan tiga sisi vertikal.
+                        </p>
+                        <img class="rounded mx-auto d-block img1" src="Img/7.png" />
+                        <p>Prisma segitiga terdiri dari beberapa jenis, yaitu:</p>
+                        <ul>
+                          <li>Prisma segitiga siku-siku: sisi alas dan atap prisma ini berbentuk segitiga siku-siku.</li>
+                          <li>Prisma segitiga sama kaki: sisi alas dan atap prisma berbentuk segitiga sama kaki.</li>
+                          <li>Prisma segitiga sama sisi: sisi alas dan atap prisma berbentuk segitiga sama sisi.</li>
+                          <li>Prisma segitiga sembarang: sisi alas dan atapnya berbentuk segitiga sembarang.</li>
+                        </ul>
+                        <br>
+                        
+                        <div id="pointer">
+                          <p style="color: #0A6847"><h8>Rusuk dan Titik Sudut Prisma Segitiga</h8></p>
+                        </div>
+                        
+                        <p>Rusuk merupakan salah satu unsur bangun ruang yang tentu saja juga dimiliki prisma segitiga. Rusuk prisma segitiga adalah garis lurus yang membangun prisma tersebut. Rusuk prisma tegak segitiga sebanyak 9 rusuk. Jika setiap sudut ditandai dengan huruf A sampai F seperti pada gambar di bawah, maka prisma segitiga rusuk adalah sebagai berikut: AB, AC, BC, AD, BF, CE, DE, DF, dan EF.</p>
+                        <img class="rounded mx-auto d-block w-25" src="Img/8.png" />
+                        
+                        <p>Unsur lain yang perlu diketahui dari prisma segitiga adalah titik sudutnya. Banyaknya titik sudut pada prisma segitiga adalah 6 buah. Dari gambar di atas, sudutnya dapat disebut sebagai sudut A, sudut B, sudut C, sudut D, sudut E, dan sudut F.</p>
+                        <br>    
+                        
+                          <div id="pointer">
+                            <p style="color: #0A6847"><h8>Ciri-Ciri Prisma Segitiga</h8></p>
+                          </div>
+                          <p>Supaya bisa lebih mengenal prisma segitiga, berikut ini beberapa ciri-cirinya yang perlu kamu pelajari:</p>
+                          
+                          <div id="content">
+                            <ul>
+                              <li>Prisma segitiga memiliki 5 bidang sisi</li>
+                              <li>Sisi alas dan sisi atas, atau disebut tutup prisma segitiga, bentuknya berupa segitiga</li>
+                              <li>Sisi tegak prisma berbentuk persegi panjang</li>
+                              <li>Memiliki 9 rusuk</li>
+                              <li>Memiliki 6 titik sudut</li>
+                              <li>Memiliki 6 diagonal sisi</li>
+                              <li>Sisi sampingnya berbentuk persegi panjang</li>
+                            </ul>
+                          </div>      
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card my-4 px-0">
+                    <div class="card-header" style="background-color: #89aa6b">
+                      <p class="fs-5 fw-bold my-0 text-white">Prisma Segiempat</p>
+                    </div>
+                    <div class="mx-3 mt-3 fs-5" style="text-align: justify">
+                      <p>Prisma segiempat adalah prisma yang alas dan tutupnya berbentuk bangun datar segiempat. Prisma segiempat mempunyai 6 buah sisi yaitu 1 alas, 1 tutup, dan 4 sisi vertikal. Prisma segiempat juga sering dikenal dengan kubus atau balok. Dinamakan kubus jika semua sisinya mempunyai panjang yang sama.</p>                     
+                      <img class="rounded mx-auto d-block w-50" src="Img/9.png" />
+                      <br><br>
+                      <div id="pointer">
+                        <p style="color: #0A6847"><h8>Rusuk dan Titik Sudut Prisma Segiempat</h8></p>
+                      </div>
+                      <p>Rusuk prisma segiempat adalah garis lurus yang membangun prisma tersebut. Rusuk prisma tegak segiempat sebanyak 12 rusuk. Jika setiap sudut ditandai dengan huruf K sampai R seperti pada gambar di bawah, maka prisma segiempat rusuk adalah sebagai berikut: KL, LM, MN, NK, KO, NR, LP, MQ, OP, PQ, QR, OR.</p>                      
+                      <img class="rounded mx-auto d-block" src="Img/10.png" style="width: 15%" />
+                      <p>Unsur lain yang perlu diketahui dari prisma segiempat adalah titik sudutnya. Banyaknya titik sudut pada prisma segiempat adalah 8 buah. Dari gambar di atas, sudutnya dapat disebut sebagai sudut K, sudut L, sudut M, sudut N, sudut O, dan sudut P, sudut Q, sudut R.</p>
+                      <br>
+                      <div id="pointer">
+                        <p style="color: #0A6847"><h8>Ciri-Ciri Prisma Segiempat</h8></p>
+                      </div>
+                      <p>Supaya bisa lebih mengenal prisma segiempat, berikut ini beberapa ciri-cirinya yang perlu kamu pelajari:</p>
+                      <div id="content">
+                        <ol>
+                          <li>Prisma segiempat memiliki 6 bidang sisi</li>
+                          <li>Prisma segiempat memiliki 6 bidang sisi</li>
+                          <li>Memiliki 12 rusuk</li>
+                          <li>Memiliki 8 titik sudut</li>
+                          <li>Memiliki 12 diagonal sisi</li>
+                          <li>Sisi sampingnya berbentuk persegi panjang</li>
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                </div>   
+                <div id="tiga">
+                  <div class="card my-4 px-0">                  
+                    <div class="card-header" style="background-color: #89aa6b">
+                      <p class="fs-5 fw-bold my-0 text-white">Prisma Segi-𝑛</p>
+                    </div>
+                    <div class="mx-3 fs-5">
+                      <div class="penjelasanku mt-3" style="text-align: justify">
+                        <p class="fs-5">Prisma segi 𝑛 adalah prisma yang alas dan tutupnya berbentuk datar segi 𝑛. Segi 𝑛 dapat berupa segilima, enam, tujuh, dan seterusnya.
+                        </p>
+                        <p>Jika 𝑛 sampai tak terhingga, maka alas prisma akan terbentuk setengah lingkaran. Prisma segi 𝑛 dengan 𝑛 yang tak terhingga sering disebut sebagai tabung.
+                        </p>
+                        <ol>
+                          <li>Banyak rusuk pada prisma segi-n adalah tiga kali dari banyak seginya (3𝑛).</li>
+                          <ul>
+                            <li>𝑛 rusuk di salah satu sisi alas atas</li>
+                            <li>𝑛 rusuk di sisi alas bawah</li>
+                            <li>𝑛 rusuk yang menghubungkan titik sudut alas yang sesuai. </li>
+                          </ul>
+                          <li>Banyak sisi pada prisma segi-n adalah jumlah seginya ditambah dengan sisi atas dan bawahnya (𝑛+2). </li>
+                          <ul>
+                            <li>2 sisi alas (atas dan bawah)</li>
+                            <li>𝑛 sisi tegak yang berbentuk persegi panjang yang menghubungkan titik sudut alas atas dan alas bawah.</li>
+                          </ul>
+                          <li>Jumlah titik sudut pada prisma adalah dua kali jumlah seginya (2𝑛). Setiap alas memiliki 𝑛 titik sudut, dan karena ada dua alas, maka jumlah total titik sudut adalah 2𝑛.</li>
+                        </ol>
+                      </ol>
+                      <br>
+                      <div id="pointer">
+                        <p style="color: #0A6847"><h8>Rusuk dan Titik Sudut Prisma Segi-𝑛</h8></p>
+                      </div>
+                      
+                        <ol>
+                          <li>Prisma segilima </li>
+                          <p>Prisma segilima adalah bangun ruang tiga dimensi yang mempunyai atap serta alas yang bentuknya segilima dan mempunyai selimut yang bentuknya persegi panjang pada sisi samping.</p>
+                          <img class="rounded mx-auto d-block" src="Img/11.png"  />
+                          <p>Rusuk prisma tegak segilima sebanyak 15 rusuk. Jika setiap sudut ditandai dengan huruf A sampai J seperti pada gambar di bawah, maka prisma segilima rusuk adalah sebagai berikut: AB, BC, CD, DE, EA, FG, GH, HI, IJ, JF, AF, BG, CH, DI, EJ.</p>
+                          <p>Unsur lain yang perlu diketahui dari prisma segilima adalah titik sudutnya. Banyaknya titik sudut pada prisma segilima adalah 10 buah. Dari gambar di atas, sudutnya dapat disebut sebagai sudut A, sudut B, sudut C, sudut D, sudut E, dan sudut F, sudut G, sudut H, sudut I, sudut J.</p>
+
+                          <li>Prisma segienam </li>
+                          <p>Prisma segienam adalah bangun ruang tiga dimensi yang mempunyai alas serta juga atap yang bentuknya segienam, serta mempunyai selimut yang bentuknya adalah persegi panjang pada sisi samping.</p>
+                          <img class="rounded mx-auto d-block w-25" src="Img/12.png" />
+                          <p>Rusuk prisma tegak segienam sebanyak 18 rusuk. Jika setiap sudut ditandai dengan huruf A sampai L seperti pada gambar di bawah, maka prisma segienam rusuk adalah sebagai berikut: AB, BC, CD, DE, EF, FA, GH, HI, IJ, JK, KL, LG, AG, BH, CI, DJ, EK, FL.</p>
+                          <p>Unsur lain yang perlu diketahui dari prisma segienam adalah titik sudutnya. Banyaknya titik sudut pada prisma segienam adalah 12 buah. Dari gambar di atas, sudutnya dapat disebut sebagai sudut A, sudut B, sudut C, sudut D, sudut E, sudut F, sudut G, sudut H, sudut I, sudut J, sudut K, sudut L.</p>                        
+                        </ol>
+                        <br>
+                        <div id="pointer">
+                          <p style="color: #0A6847"><h8>Ciri-Ciri Prisma Segi-𝑛</h8></p>
+                        </div>
+                        <p>Supaya bisa lebih mengenal prisma segi-𝑛, berikut ini beberapa ciri-cirinya yang perlu kamu pelajari:</p>
+                        <div id="content">
+                          <ul>
+                            <li>Prisma segi-𝑛 memiliki (𝑛 +2) bidang sisi</li>
+                            <li>Sisi alas prisma berbentuk datar segi n.</li>
+                            <li>Sisi tegak prisma berbentuk persegi panjang</li>
+                            <li>Memiliki (3𝑛) rusuk</li>
+                            <li>Memiliki (2𝑛) titik sudut</li>
+                            <li>Memiliki 𝑛 (𝑛 -1) diagonal sisi</li>
+                            <li>Sisi sampingnya berbentuk persegi panjang</li>
+                          </ul>
+                        </div>
+                        <p class="mt-3">Jika kita membedakan sisi pada sisi alas dan pada sisi tegak, semua prisma mempunyai dua sisi alas. Apa hubungan antara kolom titik sudut, rusuk, sisi dari prisma segi-n? Pada prisma segitiga, jumlah dari banyak titik sudut dengan banyak sisi tegak yang terhubung sama dengan banyak rusuk.</p>                        
+                      </div>
+                    </div>                    
+                  </div>
+
+                  <div class="card my-4 px-0">
+                    <div class="mx-3 fs-5" style="text-align: justify">
+                      <img class="img1" src="Img/contoh.png" style="width: 20%;"/>
+                      <div id="content">
+                        <p class="m-0 " style="color: #010508"><b>Pertanyaan:</b></p>
+                        <p class="m-0 ">Tentukan titik sudut, rusuk, dan sisi prisma segitiga</p>
+                        <p class="m-0 " style="color: #010508"><b>Penyelesaian:</b></p>
+                        <p class="m-0 ">Prisma segitiga (𝑛=3):</p>
+                        <ul>
+                          <li>Titik sudut <br> Rumus: 2 𝑛 <br> Titik sudut prisma segitiga = 2 𝑛 = 2 x 3 = 6</li>
+                          <li>Rusuk <br> Rumus: 3 𝑛 <br> Rusuk prisma segitiga = 3 𝑛 = 3 x 3 = 9</li>
+                          <li>Banyak sisi <br> Rumus: 𝑛 + 2 <br> Banyak sisi prisma segitiga = 𝑛 + 2 = 3 + 2 = 5 </li>
+                        </ul>
+                       </div>
+                       <p class="mt-3">Dalam prisma segi-𝑛, bilangan titik sudut, rusuk, dan sisi selalu terkait
+                        dengan jumlah sisi alas (𝑛). Hubungan ini membantu dalam memahami struktur
+                        dan sifat-sifat geometri dari prisma segi-𝑛.</p>    
+                    </div>
+                  </div>
+                </div>
+                <div id="empat">
+                  <div class="card my-4 px-0">
+                    <div class="mx-3 fs-5" style="text-align: justify">
+                      <img class="img1" src="Img/logo10.png" style="width: 20%" />
+                      <p>Kalian sudah belajar tentang berbagai macam prisma dan bagaimana menentukan titik sudut, rusuk, dan banyak sisinya. Sekarang, mari kita praktekkan pengetahuan kalian!</p>
+                      <div id="content">
+                        <p style="color: #010508"><b>Intruksi:</b></p>
+                        <ol>
+                          <li>Perhatikan gambar prisma dengan baik</li>
+                          <li>Hitunglah jumlah titik sudut pada prisma tersebut dan tuliskan di kolom "Titik Sudut"</li>
+                          <li>Hitunglah jumlah rusuk pada prisma tersebut dan tuliskan di kolom "Rusuk"</li>
+                          <li>Hitunglah jumlah sisi pada prisma tersebut dan tuliskan di kolom "Sisi"</li>
+                        </ol>
+                        <p style="color: #010508"><b>Tabel Prisma:</b></p>
+                       </div>                           
+                    </div>
+                  </div>
+                </div>
+                <div id="lima">
+                  <div class="card my-4 px-0">                    
+                    <div class="mx-3 fs-5" style="text-align: justify">
+                      <img class="img1" src="Img/logo11.png" style="width: 20%" />
+                    </div>  
+                    <div class="card mx-3">
+                      <div class="fs-5">
+                        <div class="row mx-3 ">
+                          <div class="mb-3">
+                            <p style="color: #01060a"><b>Intruksi</b></p>
+                            <ol>
+                              <li>Bacalah setiap pertanyaan dengan seksama</li>
+                              <li>Pilihlah jawaban yang sesuai dari daftar pilihan jawaban yang tersedia dengan menuliskan hurufnya saja.</li>
+                              <li>Jika jawaban kamu benar maka kotak akan berwarna <span class="text-success"><b>"Hijau"</b></span>.</li>
+                              <li>Jika jawaban kamu salah maka kotak akan berwarna <span class="text-danger"><b>"Merah"</b></span>, silahkan coba lagi.</li>
+                            </ol>
+                          </div>                          
+                        </div>
+                      </div>                        
+                    </div>
+                    <br>
+
+                    <div class="card mx-3">
+                      <div class="fs-5">
+                        <div class="row mx-3 ">
+                          <div class="mb-3">
+                            <p style="color: #01060a"><b>Pilihan Jawaban:</b></p>
+                            <ol style="list-style-type: upper-alpha;">
+                              <li>11, 27,18</li>
+                              <li>Prisma Segitiga</li>
+                              <li>5 dan 9</li>
+                              <li>Prisma Segiempat</li>
+                              <li>(DEF) dan (AD, BE, CF)</li>
+                            </ol>
+                          </div>                          
+                        </div>
+                      </div>                        
+                    </div>
+                    <br>
+
+                    <div class="conso" >
+                      <div class="submateri analisisC" id="submateri">
+                        <form name="form">
+                          <div class="isian">
+                            <ol>
+                              <p>Jawablah pertanyaan berikut:</p>
+
+                              <li>
+                                Perhatikan gambar di bawah ini!
+                                <br>
+                                <img class="img1" src="Img/13.png" style="width: 30%" />
+                                <div class="mencoba3_1">
+                                    <table>
+                                        <tr>
+                                            <td>Berdasarkan gambar diatas, gambar tersebut berbentuk </td>
+                                            <td class="p-2">
+                                            <input type="text" id="mencoba3_1" class="text-center" placeholder=". . .">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </li>
+                                <li>
+                                  Sebuah prisma memiliki alas berbentuk persegi empat. Nama prisma tersebut adalah 
+                                  <div class="4">
+                                    <table>
+                                      <td class="p-2"> 
+                                        <input type="text" id="mencoba4_1" class="text-center" placeholder=". . .">  
+                                      </td>
+                                    </table>
+                                </li>
+                                <li>
+                                  Perhatikan gambar prisma di bawah ini! 
+                                  <br>
+                                  <img class="img1" src="Img/14.png" style="width: 30%" />
+                                  <div class="5">
+                                    <table>
+                                      <td>Banyak sisi, rusuk dan titik sudut secara berurutan adalah</td>
+                                      <td class="p-2">
+                                      <input type="text" id="mencoba5_1" class="text-center" placeholder=". . .">  
+                                    </td>
+                                    </table>
+                                </li>
+                                <li>
+                                  Perhatikan gambar prisma di bawah ini!
+                                  <br>
+                                  <img class="img1" src="Img/15.png" style="width: 30%" />
+                                  <div class="6">
+                                      <table>
+                                          <tr>
+                                            <td>Berdasarkan gambar diatas, gambar tersebut berbentuk </td>
+                                            <td class="p-2">
+                                            <input type="text" id="mencoba6_1" class="text-center" placeholder=". . .">
+                                            </td>
+                                          </tr>
+                                      </table>
+                                  </li>
+                                  <li>
+                                    Berapa banyak sisi dan rusuk pada gambar nomor 4 
+                                    <div class="7">
+                                      <table>
+                                        <td class="p-2"> 
+                                        <input type="text" id="mencoba7_1" class="text-center" placeholder=". . .">  
+                                        </td>
+                                      </table>
+                                  </li>
+                                  <div class="mt-2">
+                                    <a type="button" class="btn btn-success text-white"
+                                        onclick="cekmencoba3_1()"><i class="fa fa-check"></i> Cek
+                                        Jawaban</a>
+                                    <input type="reset" name="submit" onclick="ulang()" value="Ulang" class="cek tombolhp" id="ulangi">
+                                </div>
+                                <div id="ketmencoba3_1"></div>
+                          </div>  
+                          </form>                        
+                        </div>
+                      </div>                        
+                    </div>
+                 </div>
+                </div> 
+                
+               <nav aria-label="...">
+                  <ul class="pagination">
+                    <li class="page-item disabled" id="btnprev">
+                      <a class="page-link" id="prev" onclick="" tabindex="-1" aria-disabled="true" style="cursor: pointer">Sebelumnya</a>
+                    </li>
+                    <li class="page-item active" id="btnsatu"><a class="page-link" onclick="satu();" style="cursor: pointer">1</a></li>
+                    <li class="page-item" id="btndua"><a class="page-link" onclick="dua();" style="cursor: pointer">2</a></li>
+                    <li class="page-item" id="btntiga"><a class="page-link" onclick="tiga();" style="cursor: pointer">3</a></li>
+                    <li class="page-item" id="btnempat"><a class="page-link" onclick="empat();" style="cursor: pointer">4</a></li>
+                    <li class="page-item" id="btnlima"><a class="page-link" onclick="lima();" style="cursor: pointer">5</a></li>
+                    <li class="page-item" id="btnnext">
+                      <a id="next" class="page-link" onclick="dua();" style="cursor: pointer">Selanjutnya</a>
+                    </li>
+                    <li class="page-item" id="btnnext">
+                      <a class="page-link bg-primary text-white ml-1" id="mnext" href="M1-3.html" hidden>Materi Berikutnya</a>
+                    </li>
+                  </ul>
+                </nav> 
+              </div>
+            </main>
+            <footer class="py-2 text-white" style="background-color: #81a263">
+              <div class="container-fluid">
+                <div class="d-flex justify-content-center">
+                  <div class="fw-bold text-center">&copy;2024 Rapiyah Hawa Nur (1810131120017)</div>
+                </div>
+              </div>
+            </footer>
+      </div>
+      </div>
+    
+  
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header bg-danger text-white">
+              <h5 class="modal-title fs-5" id="exampleModalLabel">Peringatan</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">Maaf, kamu belum bisa membuka halaman ini karena belum menyelesaikan materi sebelumnya.</div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ok</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+        import { getDatabase, ref, set, push, child, onValue, get } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+        
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyDUbkzRquQl23eOEYvaNb_rThj3nlAVAx4",
+          authDomain: "bangun-ruang-67fb3.firebaseapp.com",
+          databaseURL: "https://bangun-ruang-67fb3-default-rtdb.firebaseio.com",
+          projectId: "bangun-ruang-67fb3",
+          storageBucket: "bangun-ruang-67fb3.appspot.com",
+          messagingSenderId: "360433130501",
+          appId: "1:360433130501:web:a5aa3a1e6bb1b2e7e8906c"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase();
+
+        update(ref(db, "datasiswa/" + sessionStorage.getItem("nisn") + "/materi"), {
+            materi1: true,
+          })
+      </script>
+  
+      <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  
+      <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="javascript/Cekmateri.js" type="module"></script>
+      <script src="javascript/Script.js"></script>
+      <script src="javascript/Jstutorial.js" type="module"></script>
+      <script src="javascript/main.js"></script>
+
+  <script>
+    function cekmencoba1_1() {
+    const mencoba1_1 = document.getElementById('mencoba1_1');
+    const mencoba1_2 = document.getElementById('mencoba1_2');
+    const mencoba1_3 = document.getElementById('mencoba1_3');
+    const mencoba1_4 = document.getElementById('mencoba1_4');
+
+    const mencoba2_1 = document.getElementById('mencoba2_1');
+    const mencoba2_2 = document.getElementById('mencoba2_2');
+    const mencoba2_3 = document.getElementById('mencoba2_3');
+    const mencoba2_4 = document.getElementById('mencoba2_4');
+    const mencoba2_5 = document.getElementById('mencoba2_5');
+    const mencoba2_6 = document.getElementById('mencoba2_6');
+    const mencoba2_7 = document.getElementById('mencoba2_7');
+    const mencoba2_8 = document.getElementById('mencoba2_8');
+
+    if ((mencoba1_1.value == "") ||
+        (mencoba1_2.value == "") ||
+        (mencoba1_3.value == "") ||
+        (mencoba1_4.value == "") ) {
+        
+    } else {
+        if (mencoba1_1.value == "Persegi panjang") {
+            mencoba1_1.classList.add('warna-success');
+        } else {
+            mencoba1_1.classList.add('warna-danger');
+        }
+
+        if (mencoba1_2.value == "Segitiga") {
+            mencoba1_2.classList.add('warna-success');
+        } else {
+            mencoba1_2.classList.add('warna-danger');
+        }
+
+        if (mencoba1_3.value == "Segilima") {
+            mencoba1_3.classList.add('warna-success');
+        } else {
+            mencoba1_3.classList.add('warna-danger');
+        }
+
+        if (mencoba1_4.value == "Segienam") {
+            mencoba1_4.classList.add('warna-success');
+        } else {
+            mencoba1_4.classList.add('warna-danger');
+        }
+
+      if ((mencoba2_1.value == "") ||
+        (mencoba2_2.value == "") ||
+        (mencoba2_3.value == "") ||
+        (mencoba2_4.value == "") ||
+        (mencoba2_5.value == "") ||
+        (mencoba2_6.value == "") ||
+        (mencoba2_7.value == "") ||
+        (mencoba2_8.value == "") ) {
+       
+    } else {
+        if (mencoba2_1.value == "Persegi panjang") {
+            mencoba2_1.classList.add('warna-success');
+        } else {
+            mencoba2_1.classList.add('warna-danger');
+        }
+
+        if (mencoba2_2.value == 2) {
+            mencoba2_2.classList.add('warna-success');
+        } else {
+            mencoba2_2.classList.add('warna-danger');
+        }
+
+        if (mencoba2_3.value == "Segitiga") {
+            mencoba2_3.classList.add('warna-success');
+        } else {
+            mencoba2_3.classList.add('warna-danger');
+        }
+
+        if (mencoba2_4.value == 2 ) {
+            mencoba2_4.classList.add('warna-success');
+        } else {
+            mencoba2_4.classList.add('warna-danger');
+        }
+
+        if (mencoba2_5.value == "Segilima") {
+            mencoba2_5.classList.add('warna-success');
+        } else {
+            mencoba2_5.classList.add('warna-danger');
+        }
+
+        if (mencoba2_6.value == 2 ) {
+            mencoba2_6.classList.add('warna-success');
+        } else {
+            mencoba2_6.classList.add('warna-danger');
+        }
+
+        if (mencoba2_7.value == "Segienam") {
+            mencoba2_7.classList.add('warna-success');
+        } else {
+            mencoba2_7.classList.add('warna-danger');
+        }
+
+        if (mencoba2_8.value == "2") {
+            mencoba2_8.classList.add('warna-success');
+        } else {
+            mencoba2_8.classList.add('warna-danger');
+        }
+
+    }
+
+        if ((mencoba1_1.value == 1) &&
+            (mencoba1_2.value == 2) &&
+            (mencoba1_3.value == 3) &&
+            (mencoba1_4.value == 4) &&
+            (mencoba2_1.value == 5) &&
+            (mencoba2_2.value == 6) &&
+            (mencoba2_3.value == 7) &&
+            (mencoba2_4.value == 8) &&
+            (mencoba2_5.value == 9) &&
+            (mencoba2_6.value == 9) &&
+            (mencoba2_7.value == 10) &&
+            (mencoba2_8.value == 11)) {
+            
+            const ketmencoba1_1 = document.getElementById('ketmencoba1_1');
+            
+        } 
+    }
+}
+
+    function cekmencoba3_1() {
+    const mencoba3_1 = document.getElementById('mencoba3_1');
+    const mencoba4_1 = document.getElementById('mencoba4_1');
+    const mencoba5_1 = document.getElementById('mencoba5_1');
+    const mencoba6_1 = document.getElementById('mencoba6_1');
+    const mencoba7_1 = document.getElementById('mencoba7_1');
+    
+
+    if ((mencoba3_1.value == "") ||
+        (mencoba4_1.value == "") ||
+        (mencoba5_1.value == "") ||
+        (mencoba6_1.value == "") ||
+        (mencoba7_1.value == "")) {
+             
+      } else {
+          if (mencoba3_1.value == "Prisma segitiga") {
+              mencoba3_1.classList.add('warna-success');
+          } else {
+              mencoba3_1.classList.add('warna-danger');
+          }
+  
+          if (mencoba4_1.value == "Prisma segiempat") {
+              mencoba4_1.classList.add('warna-success');
+          } else {
+              mencoba4_1.classList.add('warna-danger');
+          }
+  
+          if (mencoba5_1.value == 11) {
+              mencoba5_1.classList.add('warna-success');
+          } else {
+              mencoba5_1.classList.add('warna-danger');
+          }
+  
+          if (mencoba6_1.value == 18 ) {
+              mencoba6_1.classList.add('warna-success');
+          } else {
+              mencoba6_1.classList.add('warna-danger');
+          }
+
+          if (mencoba7_1.value == 5 ) {
+              mencoba7_1.classList.add('warna-success');
+          } else {
+              mencoba7_1.classList.add('warna-danger');
+          }
+      
+
+      if ((mencoba3_1.value == 1) &&
+          (mencoba4_1.value == 2) &&
+          (mencoba5_1.value == 3) &&
+          (mencoba6_1.value == 4) &&
+          (mencoba7_1.value == 5)) {
+          alert("Jawaban Kamu benar !!")
+          const ketmencoba3_1 = document.getElementById('ketmencoba3_1');
+        } else {
+            alert("Jawaban anda  salah, silahkan coba lagi !!")
+        }
+      }
+  }
+
+    </script>
+    </body>
+  </html>
+  

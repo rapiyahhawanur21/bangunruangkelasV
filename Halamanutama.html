@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BANGUN RUANG</title>
+    <link rel="stylesheet" href="bootstrap/css/Bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <style>
+      body {
+        font-family: "comic sans ms" !important;
+      }
+      .col-sm-3:hover {
+        -webkit-transform: scale(1.1, 1.1) !important;
+        transform: scale(1.1, 1.1) !important;
+      }
+      @media screen and (max-width: 393px) {
+        .btn-lg {
+          font-size: 0.75rem;
+        }
+        h1 {
+          font-size: 1rem !important;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        .card-header {
+          margin: 0;
+          padding: 0;
+        }
+        h1 {
+          font-size: calc(1.3rem + 0.6vw);
+        }
+        .btn-lg {
+          padding: 0.25rem;
+          margin: 3px 3px 3px 0;
+        }
+        .container {
+          padding-top: 0 !important;
+          margin-bottom: 10%;
+        }
+        .tamp {
+          width: 75%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card text-center" style="background-color: #81a263">
+      <div class="card-header">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="tamp d-flex flex-row">
+            <img src="img/logo5.png" style="width: 20%; height: 20%" />
+            <h1 class="text-white my-auto">Bangun Ruang</h1>
+          </div>
+          <div class="p-0">
+            <button class="btn btn-danger btn-lg shadow" id="logout" onclick="btnLogout()">Keluar<i class="fa-solid fa-right-from-bracket ms-2"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container pt-5 mt-5">
+      <div class="border border-5 border-primary border-opacity-10 mb-5 mx-5 text-center">
+        <h4 style="color: #b4b4b8">"Silahkan pilih menu <bold>Materi</bold> untuk memulai pembelajaran!"</h4>
+      </div>
+      <div class="row justify-content-evenly">
+        <div class="col-sm-3 mb-4">
+          <div class="card text-center border-0">
+            <a href="cp,tp,peta konsep.html"><img src="img/logo2.png" class="card-img-top rounded-circle w-75" alt="CP, TP, dan Peta Konsep" /></a>
+            <div class="card-body">
+              <h4 class="card-text text-center fw-bold fs-3" style="color: #b4b4b8">CP, TP, dan Peta Konsep</h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 mb-4">
+          <div class="card text-center border-0">
+            <a href="Materi1.html"><img src="img/logo3.png" class="card-img-top rounded-circle w-75" alt="Materi" /></a>
+            <div class="card-body">
+              <h4 class="card-text text-center fw-bold fs-3" style="color: #b4b4b8">Materi</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-3 mb-4">
+          <div class="card text-center border-0">
+            <a href="Info.html"><img src="img/logo4.png" class="card-img-top rounded-circle w-75" alt="Info" /></a>
+            <div class="card-body">
+              <h4 class="card-text text-center fw-bold fs-3" style="color: #b4b4b8">Info</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card text-center" style="background-color: #81a263">
+      <div class="card-footer text-white fw-bold">&copy;2024 Rapiyah Hawa Nur (1810131120017)</div>
+    </div>
+
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="javascript/Script.js"></script>
+  </body>
+</html>

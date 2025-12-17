@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Login Siswa | Bangun ruang</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="bootstrap/css/Bootstrap.min.css" />
+    <style>
+      body {
+        font-family: "comic sans ms" !important;
+      }
+
+      @media screen and (max-width: 700px) {
+        .container-fluid {
+          padding-top: auto !important;
+        }
+
+        .row {
+          margin: 0 !important;
+        }
+
+        .col-md-6 {
+          border: none !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container-fluid pt-3">
+      <div class="row m-5 border border-primary border-5 border-opacity-10 rounded-5 justify-content-center" style="background-color: #add899">
+        <div class="col-md-6 py-5 border-end border-primary border-opacity-10 text-center">
+          <img class="img-fluid" src="img/logo6.png" />
+        </div>
+        <div class="col-md-6 py-5 px-5 border-start border-primary border-opacity-10 text-center">
+          <div class="my-5 fs-6">
+            <p class="fst-italic text-white">Silahkan Isi Data di Bawah Ini untuk Mulai Belajar</p>
+            <input type="text" placeholder="Masukkan NISN" id="nisn" class="form-control my-3" />
+            <input type="password" placeholder="Masukkan password" id="pw" class="form-control" />
+          </div>
+
+          <button id="log_in" class="btn btn-outline-primary"><b>Masuk</b></button>
+          <a class="btn btn-outline-primary btn-link" href="login-guru.html">Login sebagai Guru</a>
+        </div>
+      </div>
+    </div>
+
+    <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+  import {
+    getDatabase,
+    ref,
+    child,
+    get
+  } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSy....",
+    authDomain: "bangun-ruangkelas5sd.firebaseapp.com",
+    databaseURL: "https://bangun-ruangkelas5sd-default-rtdb.firebaseio.com",
+    projectId: "bangun-ruangkelas5sd",
+    storageBucket: "bangun-ruangkelas5sd.appspot.com",
+    messagingSenderId: "433621047164",
+    appId: "1:433621047164:web:d92c115582a8864063b6f9"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase();
+
+      //const log_in = document.getElementById("log_in");
+      log_in.addEventListener("click", (e) => {
+        get(child(ref(db), "ClassList")).then((snapshot) => {
+          const kelasDB = snapshot.val();
+          get(child(ref(db), "datasiswa/" + nisn.value)).then((snapshot) => {
+            if (snapshot.exists()) {
+              let dbnama = snapshot.val().nama;
+              let dbnisn = snapshot.val().nisn;
+              //let dbkelas = kelasDB[snapshot.val().kelas].nama;
+              let dbsekolah = snapshot.val().sekolah;
+              let dbpw = snapshot.val().pw;
+
+              if (dbnisn == nisn.value && dbpw == pw.value) {
+                sessionStorage.setItem("nama", dbnama);
+                sessionStorage.setItem("nisn", dbnisn);
+                //sessionStorage.setItem("kelas", dbkelas);
+                //sessionStorage.setItem("kelas-id", snapshot.val().kelas);
+                sessionStorage.setItem("sekolah", dbsekolah);
+                sessionStorage.setItem("pw", dbpw);
+
+                window.location = "Halamanutama.html";
+              } else {
+                alert("NISN atau password tidak valid");
+              }
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

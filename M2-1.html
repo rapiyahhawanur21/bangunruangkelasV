@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beranda | Bangun Ruang</title>
+    <link rel="stylesheet" href="Style/materi.css.css" />
+    <link rel="stylesheet" href="bootstrap/css/Bootstrap.min.css" />
+    <link rel="stylesheet" href="fontawesome-free-6.5.2-web/css/all.css" />
+    <style>
+      @media screen and (max-width: 280px) {
+        .navbar-brand {
+          font-size: 0.8rem !important;
+        }
+        .navbar-brand-icon img {   
+          width: 15px !important;
+        }
+        .keluar {
+          font-size: 0.75rem !important;
+        }
+        .home {
+          margin-left: 0 !important;
+        }
+        .sb-topnav .navbar-brand {
+          width: auto;
+        }
+        .pagination a {
+          padding: 0.25rem !important ;
+          font-size: 0.5rem !important ;
+        }
+        body,
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .fs-5 {
+          font-size: 15px !important;
+        }
+        .form-check-label {
+          font-size: 10px;
+        }
+      }
+      @media screen and (max-width: 700px) {
+        .navbar-brand {
+          font-size: 1.075rem;
+        }
+        .keluar {
+          padding: 0.25rem;
+          font-size: 1rem;
+        }
+        .home {
+          margin-left: 0 !important;
+        }
+        .sb-topnav .navbar-brand {
+          width: auto;
+        }
+        .pagination a {
+          padding: 0.25rem !important ;
+          font-size: 0.75rem;
+        }
+        .img1 {
+          width: 50% !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand navbar-dark" style="background-color: #81A263">
+      <!-- Navbar Brand-->
+      <a class="navbar-brand d-flex px-1" href="Halamanutama.html">
+        <div class="navbar-brand-icon">
+          <img src="Img/logo5.png" style="width: 25px" />
+        </div>
+        <div class="navbar-brand-text px-1 fw-bold">Bangun Ruang</div>
+      </a>
+      <!-- Sidebar Toggle-->
+      <button class="home btn btn-link btn-sm order-1 order-lg-0 ms-5 me-lg-0" id="sidebarToggle" href="#!"><i class="text-white fa-solid fa-bars"></i></button>
+      <div class="ms-auto me-1">
+        <button class="keluar btn btn-danger shadow" id="logout" onclick="btnLogout()">Keluar<i class="fa-solid fa-right-from-bracket ms-2"></i></button>
+      </div>
+    </nav>
+
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+          <nav class="sb-sidenav accordion sb-sidenav-light" id="sidenavAccordion">
+            <div class="sb-sidenav-menu">
+              <div class="m-2 text-center">
+                <img src="Img/logo7.png" class="w-50" />
+                <h5 class="mt-2"><span id="userlink">User</span></h5>
+                <hr />
+              </div>
+
+              <div class="nav">
+                <a class="nav-link collapsed active" href="#" data-bs-toggle="collapse" data-bs-target="#collapseSubtema1" aria-expanded="false" aria-controls="collapseMateri1">
+                  <div class="sb-nav-link-icon"><i class="fa-regular fa-file-lines"></i></div>
+                  Materi 1
+                  <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                </a>
+                <div class="collapse show" id="collapseSubtema1" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                  <nav class="sb-sidenav-menu-nested nav">
+                    <a id="materi_1" class="nav-link" href="Materi1.html">Materi 1</a>
+                  <a id="materi_2" class="nav-link " href="M1-1.html">Bangun Ruang</a>
+                  <a id="materi_3" class="nav-link " href="M1-2.html">Prisma</a>
+                  <a id="materi_3" class="nav-link" href="M1-3.html">Tabung</a>
+                  <a id="materi_4" class="nav-link" href="../Kuis/Kuis1.html">Kuis 1</a>
+                </nav>
+              </div>
+  
+              <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseSubtema2" aria-expanded="false" aria-controls="collapseMateri2">
+                <div class="sb-nav-link-icon"><i class="fa-regular fa-file-lines"></i></div>
+                Materi 2
+                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+              </a>
+                <div class="collapse" id="collapseSubtema2" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                  <nav class="sb-sidenav-menu-nested sb-sidenav-lightnav">
+                    <a id="materi_5" class="nav-link" href="Materi2.html">Materi 2</a>
+                    <a id="materi_6" class="nav-link active" href="M2-1.html">Sketsa</a>
+                    <a id="materi_7" class="nav-link" href="M2-2.html">Jaring-jaring</a>
+                    <a id="materi_8" class="nav-link" href="Kuis/Kuis2.html">Kuis 2</a>
+                  </nav>
+                </div>
+  
+                <a id="materi_9" class="nav-link" onclick="evaluasi()">
+                  <div class="sb-nav-link-icon"><i class="fa-solid fa-file-pen"></i></div>
+                  Evaluasi
+                </a>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div id="layoutSidenav_content">
+          <main>
+            <div class="container-fluid px-4 mb-4">
+              <h2 class="mt-4"> Materi 2: Sketsa</h2>
+              <div class="row border px-4">
+                <div id="satu">
+                  <div class="card my-4 px-0">
+                    <div class="mx-3 fs-5" style="text-align: justify">
+                      <p>Sketsa adalah gambar sederhana yang menggambarkan bagian- bagian pokok tanpa detail.</p>
+                      <img class="img1" src="Img/21.png" style="width: 40%" />
+                    </div>
+                    <div class="card m-4 px-0">
+                      <div class="card x-3 my-3">
+                        <div class="card-header" style="background-color: #C3FF93">
+                            <p class="fs-5 fw-bold my-0 text-white">Prisma Segiempat</p>
+                            </div>
+                            <p>Bagaimana cara menggambar sketsa prisma segiempat? </p>
+                            <img class="img1" src="Img/logo10.png" style="width: 15%" />
+                            <p>Gambarlah sebuah sketsa, sehingga kamu dapat melihat langsung keseluruhan prisma segi empat.</p>
+                            <div id="content">
+                                <p class="text-center" style="color: #01060a"><b>Langkah-langkah membuat sketsa </b></p>
+                                <ol>
+                                    <li>Gambarlah persegi atau persegi panjang di bagian bawah kertas yang akan menjadi alas pertama dan prisma</li>
+                                    <li>Gambar persegi atau persegi panjang kedua yang sama persis dengan alas pertama, tetapi sedikit di atas dan bergeser ke satu sisi. Pastikan kedua alas sejajar</li>
+                                    <li>Hubungkan setiap sudut alas pertama dengan sudut yang sesuai pada alas kedua dengan garis lurus. Ini akan membentuk sisi-sisi tegak dari prisma.</li>
+                                    <li>Pertegas garis-garis luar prisma dan buat garis-garis yang tidak terlihat (garis belakang) menjadi garis putus-putus untuk memberikan efek tiga dimensi.</li>
+                                </ol>
+                                <br>
+                                <img class="img1" src="Img/22.PNG" style="width: 50%" />
+
+                            </div>
+                          </div>
+                        </div>
+                        </div>
+                      </div>
+                <div id="dua">
+                          <div class="card m-4 px-0">
+                            <div class="card x-3 my-3">
+                              <div class="card-header" style="background-color: #C3FF93">
+                                  <p class="fs-5 fw-bold my-0 text-white">Prisma Segitiga</p>
+                                  </div>
+                                  <p>Bagaimana cara menggambar sketsa prisma segitiga? </p>
+                                  <img class="img1" src="Img/logo10.png" style="width: 15%" />
+                                  <p>Gambarlah sebuah sketsa, sehingga kamu dapat melihat langsung keseluruhan prisma segitiga.</p>
+                                  <div id="content">
+                                      <p class="text-center" style="color: #01060a"><b>Langkah-langkah membuat sketsa </b></p>
+                                      <ol>
+                                          <li>Gambar sebuah segitiga di bagian bawah kertas. Ini akan menjadi alas pertama dari prisma.</li>
+                                          <li>Gambar segitiga kedua yang sama persis dengan alas pertama, tetapi sedikit di atas dan bergeser ke satu sisi. Pastikan kedua alas ini sejajar.</li>
+                                          <li>Hubungkan setiap sudut alas pertama dengan sudut yang sesuai pada alas kedua dengan garis lurus. Ini akan membentuk sisi-sisi tegak dari prisma.</li>
+                                          <li>Pertegas garis-garis luar prisma dan buat garis-garis yang tidak terlihat (garis belakang) menjadi garis putus-putus untuk memberikan efek tiga dimensi.</li>
+                                      </ol>
+                                      <img class="img1" src="Img/23.PNG" style="width: 50%" />
+                                  </div>
+                                </div>
+                              </div>
+                      </div>
+                <div id="tiga">
+                                  <div class="card m-4 px-0">
+                                    <div class="card x-3 my-3">
+                                      <div class="card-header" style="background-color: #C3FF93">
+                                          <p class="fs-5 fw-bold my-0 text-white">PRISMA SEGI-- 𝑛</p>
+                                          </div>
+                                          <p>Bagaimana cara menggambar sketsa prisma segienam? </p>
+                                          <img class="img1" src="Img/logo10.png" style="width: 15%" />
+                                          <p>Gambarlah sebuah sketsa, sehingga kamu dapat melihat langsung keseluruhan prisma segienam.</p>
+                                          <div id="content">
+                                              <p class="text-center" style="color: #01060a"><b>Langkah-langkah membuat sketsa </b></p>
+                                              <ol>
+                                                  <li>Gambar segi enam yang akan menjadi alas dari prisma. </li>
+                                                  <li>Tambahkan segienam yang kedua. Segi enam kedua akan menjadi alas prisma. Gambar kedua harus sama persis dengan alas pertama.</li>
+                                                  <li>Hubungkan setiap sudut alas pertama dengan sudut yang sesuai pada alas kedua dengan garis lurus. Ini akan membentuk sisi-sisi tegak dari prisma segienam.</li>
+                                                  <li>Pertegas garis-garis luar prisma dan buat garis-garis yang tidak terlihat (garis belakang) menjadi garis putus-putus untuk memberikan efek tiga dimensi.</li>
+                                              </ol>
+                                              <img class="img1" src="Img/24.PNG" style="width: 50%" />
+                                          </div>
+                                        </div>
+                                      </div>
+                      </div>
+                <div id="empat">
+                                    <div class="card m-4 px-0">
+                                      <div class="card x-3 my-3">
+                                        <div class="card-header" style="background-color: #C3FF93">
+                                            <p class="fs-5 fw-bold my-0 text-white">TABUNG</p>
+                                            </div>
+                                            <p>Bagaimana cara menggambar sketsa tabung? </p>
+                                            <img class="img1" src="Img/logo10.png" style="width: 15%" />
+                                            <p>Gambarlah sebuah sketsa, sehingga kamu dapat melihat langsung keseluruhan tabung.</p>
+                                            <div id="content">
+                                                <p class="text-center" style="color: #01060a"><b>Langkah-langkah membuat sketsa </b></p>
+                                                <ol>
+                                                    <li>Menggambar dua lingkaran dengan ukuran yang sama. Satu lingkaran akan menjadi bagian atas tabung dan yang lainnya bagian bawahnya. Pastikan kedua lingkaran berada pada jarak yang sama satu sama lain.</li>
+                                                    <li>Hubungkan kedua lingkaran dengan dua garis lurus yang sejajar. Ini akan membentuk sisi tabung.</li>
+                                                </ol>
+                                                <img class="img1" src="Img/25.PNG" style="width: 50%" />
+                                            </div>
+                                          </div>
+                                        </div>
+                      </div>
+                <div id="lima">
+                                    <div class="card my-4 px-0">
+                                      <img class="img1" src="Img/logo11.png" style="width: 20%" />
+                                      <div class="mx-3 fs-5" style="text-align: justify">
+                                        <div id="content">
+                                          <p style="color: #010508"><b>Intruksi:</b></p>
+                                          <ol>
+                                            <li>Bacalah setiap pertanyaan dengan seksama</li>
+                                            <li>Gambarlah sketsa bangun ruang yang diminta</li>
+                                          </ol>
+                                          <p style="color: #010508"><b>Soal:</b></p>
+                                          <ol>
+                                            <li>1.	Gambarlah sketsa bangun ruang prisma berikut.</li>
+                                          
+                                          <img class="img1" src="Img/26.png" style="width: 20%" />
+                                          <p>Berdasarkan gambar diatas, gambar tersebut berbentuk.
+                                          </p>
+                                          
+                                            <li>
+                                              Sebuah prisma memiliki alas berbentuk persegi empat. Nama prisma tersebut adalah ….
+                                            </li>
+                                            <li>Perhatikan gambar prisma di bawah ini!</li>
+                                          
+                                          <img class="img1" src="Img/27.png" style="width: 20%" />
+                                          <p>Banyak sisi, rusuk dan titik sudut secara berurutan adalah...</p>
+                                          
+                                            <li>Perhatikan gambar prisma di bawah ini!4.	Perhatikan gambar prisma di bawah ini!</li>
+                                
+                                          <p>Sisi manakah yang sejajar dengan sisi ABC dan sisi manakah yang tegak lurus dengan sisi ABC…</p>
+                                          
+                                            <li>Berapa banyak sisi dan rusuk pada gambar nomor 4…</li>
+                                          </ol>
+                  
+                            </div>
+                          </div>
+                        </div>
+                      </div>     
+                 
+               <nav aria-label="...">
+                  <ul class="pagination">
+                    <li class="page-item disabled" id="btnprev">
+                      <a class="page-link" id="prev" onclick="" tabindex="-1" aria-disabled="true" style="cursor: pointer">Sebelumnya</a>
+                    </li>
+                    <li class="page-item active" id="btnsatu"><a class="page-link" onclick="satu();" style="cursor: pointer">1</a></li>
+                    <li class="page-item active" id="btndua"><a class="page-link" onclick="dua();" style="cursor: pointer">2</a></li>
+                    <li class="page-item" id="btntiga"><a class="page-link" onclick="tiga();" style="cursor: pointer">3</a></li>
+                    <li class="page-item" id="btnempat"><a class="page-link" onclick="empat();" style="cursor: pointer">4</a></li>
+                    <li class="page-item" id="btnempat"><a class="page-link" onclick="lima();" style="cursor: pointer">5</a></li>
+                    <li class="page-item" id="btnnext">
+                      <a id="next" class="page-link" onclick="lima();" style="cursor: pointer">Selanjutnya</a>
+                    </li>
+                    <li class="page-item" id="btnnext">
+                      <a class="page-link bg-primary text-white ml-1" id="mnext" href="M2-2.html" hidden>Materi Berikutnya</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              </div>
+          </main>
+          <footer class="py-2 text-white" style="background-color: #a2cdcd">
+            <div class="container-fluid">
+              <div class="d-flex justify-content-center">
+                <div class="fw-bold text-center">&copy;2024 Rapiyah Hawa Nur (1810131120017)</div>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+  
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header bg-danger text-white">
+              <h5 class="modal-title fs-5" id="exampleModalLabel">Peringatan</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">Maaf, kamu belum bisa membuka halaman ini karena belum menyelesaikan materi sebelumnya.</div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ok</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+        import { getDatabase, ref, set, push, child, onValue, get } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+        
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyDUbkzRquQl23eOEYvaNb_rThj3nlAVAx4",
+          authDomain: "bangun-ruang-67fb3.firebaseapp.com",
+          databaseURL: "https://bangun-ruang-67fb3-default-rtdb.firebaseio.com",
+          projectId: "bangun-ruang-67fb3",
+          storageBucket: "bangun-ruang-67fb3.appspot.com",
+          messagingSenderId: "360433130501",
+          appId: "1:360433130501:web:a5aa3a1e6bb1b2e7e8906c"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase();
+
+        update(ref(db, "datasiswa/" + sessionStorage.getItem("nisn") + "/materi"), {
+            materi1: true,
+          })
+      </script>
+  
+      <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  
+      <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="javascript/Cekmateri.js" type="module"></script>
+      <script src="javascript/Script.js"></script>
+      <!-- <script src="javascript/Jstutorial.js" type="module"></script> -->
+
+      <script>
+        // function myfun() {
+        //   var a = document.forms.container;
+        //   const alertPlaceholder = document.getElementById("liveAlertPlaceholder");
+        //   let baris1 = document.getElementById("baris1");
+        //   let baris2 = document.getElementById("baris2");
+        //   let baris3 = document.getElementById("baris3");
+        //   let baris4 = document.getElementById("baris4");
+        //   let baris5 = document.getElementById("baris5");
+        //   let baris6 = document.getElementById("baris6");
+  
+        //   //let icon1 = document.getElementById("icon1");
+        //   //let icon2 = document.getElementById("icon2");
+        //   //let icon3 = document.getElementById("icon3");
+        //   //let icon4 = document.getElementById("icon4");
+          
+            
+        //       if (baris1.checked, baris2.checked, baris3.checked, baris4.checked, baris5.checked == false) {
+        //         respon.innerHTML = "Jawaban Kamu Benar!";
+        //         respon.classList.add("text-success");
+        //         respon.classList.remove("text-danger");
+        //       } else {
+        //         respon.innerHTML = "Jawaban Kamu Salah!";
+        //         respon.classList.add("text-danger");
+        //       }
+  
+        //       if (baris6.checked == true) {
+        //         respon.innerHTML = "Jawaban Kamu Benar!";
+        //         respon.classList.add("text-success");
+        //         respon.classList.remove("text-danger");
+        //       } else {
+        //         respon.innerHTML = "Jawaban Kamu Salah!";
+        //         respon.classList.add("text-danger");
+        //       }
+        //       alert("", "danger");
+            
+  
+        //   const alert = (message, type) => {
+        //     const wrapper = document.createElement("div");
+        //     wrapper.innerHTML = [
+        //       `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+        //       `   <div>${message}</div>`,
+        //       '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+        //       "</div>",
+        //     ].join("");
+  
+        //     alertPlaceholder.append(wrapper);
+        //   };
+        //   alert("Silahkan pilih terlebih dahulu!", "danger");
+        //   return false;
+        // }
+  
+        // function cekJawaban() {
+        //   var rbenar = 0;
+        //   var rsalah = 0;
+        //   var nilai = 0;
+        //   var pesan = ["Yeayyy, kamu berhasil!", "Yahhh, sayang sekali. <br> Belajar yang lebih giat lagi ya!"];
+        //   var tingkat;
+  
+        //   let jno1 = document.querySelector("#jno1");
+        //   let jno2 = document.querySelector("#jno2");
+  
+        //   let rno1 = document.querySelector("#rno1");
+        //   let rno2 = document.querySelector("#rno2");
+  
+        //   let response;
+        //   if (jno1.checked) {
+        //     rbenar++;
+        //     response = "Jawaban Kamu Benar!";
+        //     rno1.classList.add("bg-success");
+        //     rno1.classList.remove("bg-danger");
+        //   } else {
+        //     rsalah++;
+        //     response = "Jawaban Kamu Salah!";
+        //     rno1.classList.add("bg-danger");
+        //   }
+        //   rno1.innerHTML = response;
+  
+        //   if (jno2.checked) {
+        //     rbenar++;
+        //     response = "Jawaban Kamu Benar!";
+        //     rno2.classList.add("bg-success");
+        //     rno2.classList.remove("bg-danger");
+        //   } else {
+        //     rsalah++;
+        //     response = "Jawaban Kamu Salah!";
+        //     rno2.classList.add("bg-danger");
+        //   }
+        //   rno2.innerHTML = response;
+  
+        //   if (rbenar == 2) {
+        //     tingkat = 0;
+        //     document.getElementById("pesan-ganti-2").innerHTML = `
+        //     <hr><div class="text-center mt-3" id="cek">
+        //           <div class="bg-success text-white">
+        //               <span id="nilai"></span><br><br>
+        //               <p id="pesan1"></p>
+        //           </div>
+        //       </div>
+        //   `;
+        //   } else {
+        //     tingkat = 1;
+        //     document.getElementById("pesan-ganti-2").innerHTML = `
+        //     <hr><div class="text-center mt-3" id="cek">
+        //           <div class="bg-danger text-white">
+        //               <span id="nilai"></span><br><br>
+        //               <p id="pesan1"></p>
+        //           </div>
+        //       </div>    
+        //   `;
+        //   }
+        //   nilai = rbenar * 50;
+        //   document.getElementById("cek").style.visibility = "visible";
+  
+        //   document.getElementById("nilai").innerHTML = "Nilai = " + nilai;
+        //   document.getElementById("pesan1").innerHTML = pesan[tingkat];
+        // }
+  
+        // function resetJawaban() {
+        //   document.getElementById("jno1").checked = false;
+        //   document.getElementById("jno2").checked = false;
+  
+        //   let rno1 = document.querySelector("#rno1");
+        //   let rno2 = document.querySelector("#rno2");
+  
+        //   rno1.classList.remove("bg-success" && "bg-danger");
+        //   rno2.classList.remove("bg-success" && "bg-danger");
+        //   rno1.innerHTML = "";
+        //   rno2.innerHTML = "";
+        // }
+      </script>
+    </body>
+  </html>
+  
