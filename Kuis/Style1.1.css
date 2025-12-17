@@ -1,0 +1,284 @@
+body {
+  font-family: "Century Gothic", "Lato", sans-serif;
+  a {
+    text-decoration: none;
+  }
+}
+
+.p1 {
+  font-size: 1rem;
+  letter-spacing: 0.2rem;
+  opacity: 0.8;
+  top: 20px;
+  width: 95%;
+  text-align: justify;
+}
+.materi {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 40px;
+  padding-left: 40px;
+  padding-inline-start: 50px;
+  padding-inline-end: 50px;
+}
+
+.headeri {
+  background-color: #b9a5c5;
+}
+
+.et-hero-tabs,
+.et-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  background-image: url(landingpage.png);
+  background-size: 100%;
+  text-align: center;
+  padding: 0 2em;
+}
+.et-hero-tabs h1,
+.et-slide h1 {
+  font-size: 2rem;
+  margin: 0;
+  letter-spacing: 1rem;
+}
+.et-hero-tabs h3,
+.et-slide h3 {
+  font-size: 1rem;
+  letter-spacing: 0.3rem;
+  opacity: 0.6;
+}
+
+.et-hero-tabs-container {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  z-index: 10;
+}
+.et-hero-tabs-container--top {
+  position: fixed;
+  top: 0;
+}
+
+.et-hero-tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  color: #000;
+  letter-spacing: 0.1rem;
+  transition: all 0.5s ease;
+  font-size: 0.8rem;
+}
+.et-hero-tab:hover {
+  color: white;
+  background: rgba(34, 1, 75, 0.857);
+  transition: all 0.5s ease;
+}
+
+.et-hero-tab-slider {
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 6px;
+  background: rgba(34, 1, 75, 0.857);
+  transition: left 0.3s ease;
+}
+
+@media (min-width: 800px) {
+  .et-hero-tabs h1,
+  .et-slide h1 {
+    font-size: 3rem;
+  }
+  .et-hero-tabs h3,
+  .et-slide h3 {
+    font-size: 1rem;
+  }
+  .et-hero-tab {
+    font-size: 1rem;
+  }
+}
+
+/*btn*/
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  color: #81a263;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+.btn-15 {
+  background: #b9a5c5;
+  border: none;
+  z-index: 1;
+}
+.btn-15:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background-color: rgba(34, 1, 75, 0.857);
+  border-radius: 5px;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.1), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease;
+}
+.btn-15:hover {
+  color: rgb(185, 165, 197);
+}
+.btn-15:hover:after {
+  left: 0;
+  width: 100%;
+}
+.btn-15:active {
+  top: 2px;
+}
+.btnkuis {
+  box-sizing: content-box;
+}
+.ungu {
+  background-color: rgb(182, 128, 233);
+}
+#btn-ungu {
+  background-color: rgb(117, 50, 184);
+  color: #fff;
+}
+#btn-ungu:hover {
+  background-color: rgb(60, 5, 114);
+  color: #fff;
+}
+#drag-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#drag-container div {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid black;
+  cursor: move;
+}
+
+#drop-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+#drop-container div {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#drop-container div:hover {
+  border-style: dashed;
+}
+
+#drop-container div.correct {
+  background-color: #8bc34a;
+}
+
+#drop-container div.incorrect {
+  background-color: #f44336;
+}
+
+#btn-cek {
+  margin-right: 20px;
+  padding: 8px;
+
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: rgb(33, 133, 103);
+  color: white;
+}
+#btn-reset {
+  margin-right: 20px;
+  padding: 8px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: black;
+  color: #ffffff;
+}
+#btn-hint {
+  background-color: rgb(255, 145, 0);
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 20px;
+}
+.Example {
+  background-color: bisque;
+
+  padding-top: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.btnclose {
+  display: none;
+}
+
+/* <//----------  pagination
+//------------------------------------------------------------------------------ */
+.pagination-wrapper {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.pagination {
+  display: inline-block;
+  height: 50px;
+  margin-top: 10px;
+  padding: 0 25px;
+  border-radius: 35px;
+  background-color: grey-light;
+}
+
+.page-numbers {
+  display: block;
+  padding: 0 25px;
+  float: left;
+  color: grey;
+  font-size: 15px;
+  letter-spacing: 0.1em;
+  line-height: 50px;
+
+  &:hover,
+  &.current {
+    background-color: blueviolet;
+    color: white;
+  }
+
+  &.prev:hover,
+  &.next:hover {
+    background-color: transparent;
+    color: white;
+  }
+
+  .ungu {
+    background-color: blueviolet;
+  }
+}

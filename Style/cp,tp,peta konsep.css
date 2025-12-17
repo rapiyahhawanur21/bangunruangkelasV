@@ -1,0 +1,12 @@
+body {
+  font-family: "comic sans ms" !important;
+}
+
+.card-footer {
+  color: white !important;
+  background-color: #A1C2F1 !important;
+}
+
+/*
+@media screen and (max-width: 500.82px) {
+}*/

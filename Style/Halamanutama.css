@@ -1,0 +1,84 @@
+* {
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'comic sans ms';
+}
+
+.header {
+    width: 100%;
+    background: #AFB9C8;
+    text-align: center;
+}
+
+.header a Img {
+    width: 700px;
+}
+
+.tutor-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 72px 0px 72px 0px;
+    text-align: center;
+}
+
+.kartu-tutor {
+    width: 20%;
+    margin: 0 auto;
+}
+
+.kartu-tutor img {
+    width: 80%;
+    border-radius: 50%;
+}
+
+.kartu-tutor p {
+    font-family: 'comic sans ms';
+    font-weight: 800;
+    font-size: 25px;
+    color: #6FA8DC;
+}
+
+#ef:hover {
+    -webkit-transform: scale(1.1,1.1);
+    transform: scale(1.1,1.1);
+}
+
+.footer {
+    text-align: center;
+    padding: 15px 0px 15px 0px;
+    color: white;
+    background-color: #AFB9C8;
+}
+
+@media screen and (max-width: 991.98px) {
+    .header a img {
+        display: block;
+        width: 100%;
+    }
+
+    section {
+        display: block;
+    }
+
+    section img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .kartu-tutor {
+        width: 50%;
+    }
+    
+    .kartu-tutor p {
+        font-weight: 700;
+        font-size: 20px;   
+    }
+}

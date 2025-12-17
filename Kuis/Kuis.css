@@ -1,0 +1,474 @@
+body{
+    background		: #c7cfb7; 
+}
+a,p, br,td, th, span, div, h1{
+	text-decoration	: none;
+    font-family		: cambria, "Times New Roman",serif;
+  	font-size		: 17px;
+}
+.container-fluid h4{ 
+    font-family		: 'Poppins', sans-serif;
+    margin-bottom	: 0%;
+	font-size		: 2rem;
+	text-align		: center;
+	height			:56px;
+	color			: #ffffff;
+	line-height		: 60px; 
+	font-weight		: 700;
+	text-shadow		: 2px 2px 1px #B09B71; 
+	margin			: auto;
+	display			: block;
+}
+.navbar{
+    background-color: #899c66;
+    border-bottom   : 10px solid #fff;
+} 
+.content{
+    min-height		: 100vh;
+    width			: 100%;
+} 
+.main {  
+    margin			: 10px; 
+	padding			:20px; 
+	height			: 720px;
+	overflow-y		: auto; 
+	background-color: #f7f7e8;
+	overflow-x		: hidden;
+}  
+.hilang {
+    display: none !important;
+  }
+.kembali{
+    text-decoration: none; 
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+.kembali:hover{
+    text-decoration: none; 
+    color: white;
+    background-color:green !important; 
+    font-weight: bold;
+}
+.percobaan1{
+	background-color:#FCFFE7;
+	padding			: 1%;
+	border-radius	: 5px;
+} 
+.lanjut{ 
+    color: white; 
+    padding: 7px;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: auto;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}
+ 
+  .kiri{
+  float: left;
+  position: fixed;
+  width: 25%;
+  background-color: white;
+	border			: 3px solid #868583;
+  height: 460px;  
+  text-align: justify;
+  box-sizing: border-box; 
+  padding: 5px; 
+  }
+  
+  .kanan {
+  float: right;
+  position: fixed;
+  margin-left: 25%;
+  width: 70%;
+  background-color: white;
+	border			: 3px solid #868583;
+  height: 460px;
+  padding: 5px;
+  overflow: hidden;
+  text-align: justify;
+  box-sizing: border-box;  
+  }
+  
+  .disable { 
+  color: rgb(37, 37, 37);
+  cursor: default !important;
+  }
+ 
+
+label {
+    width: 100%;
+    display: inline-block;
+    padding: 0px 10px 0px 20px;
+    text-align: justify;
+}
+ 
+.bg_nav {
+    width: 99%;  
+   
+}
+
+.bg_full {
+    width: 100%;
+    text-align: center;
+    color: black; 
+
+}
+.activity{ 
+    width: 950px;
+	background-color	: #c7cfb7;
+	border			: 2px solid #868583;
+	border-radius		: 5px;
+	padding			: 10px;
+    height: 310px;
+}
+.text {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.bg_soal {
+    width: 100%;
+    padding: 10px 0; 
+    background-color: #ffffff;
+    border-radius: 10px; 
+}
+
+.bg_soal span {
+    padding: 2px;
+    display: inline-block;
+    width: 60px;
+    margin-bottom: 5px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.soal_nav {
+    width: 14%;
+    height: 18%;
+    padding: 2px;
+    text-align: center;
+    border			: 2px solid #ffffff;
+    border-radius: 5px;
+    float: left;
+    margin-left: 8.5%;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+.soal_nav:hover {
+    cursor: pointer;
+    background-color: #39A7FF;
+    color: white;
+    border			: 2px solid #ffffff;
+}
+
+.belum {
+    background-color: white; 
+	border			: 2px solid #868583;
+}
+
+.fontsedang {
+    font-size: 16px;
+}
+
+.clear {
+    clear: both;
+}
+
+.ket {
+    width: 100%;
+    margin-left: 8.5%;
+    margin-top: 10px;
+}
+
+.sudah {
+    background-color: #39A7FF;
+    color: white;
+    border			: 2px solid #ffffff;
+}
+
+.selesai {
+    margin-top: 10px;
+    font-size: 20px;
+    text-align: center;
+    width: 80%; 
+    color: white;
+    cursor: pointer;
+    height: 30px;
+    border-radius: 10px;
+    line-height: 30px;
+    margin-left: 10%;
+}
+.selesai:hover{
+    text-decoration: none; 
+    color: white;
+    background-color:green !important; 
+    font-weight: bold;
+  }
+.bg_pertanyaan {
+    width: 100%;
+}
+
+.no {
+    padding: 10px 0;
+}
+.nomor{
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+.time{
+    float: right;
+    background-color: #c7cfb7;
+      border: 2px solid #868583;
+      border-radius: 5px;
+      padding: 10px; 
+    width: 110px;
+    
+  }  
+ 
+.inti_pertanyaan {
+    padding: 10px 20px; 
+    overflow-y: scroll;
+    height: 370px;
+}
+
+.pertanyaannya {
+    /* border-left: 4px solid green; */
+    padding-left: 15px;
+    font-size: 18px;
+}
+ 
+/* radio button */
+
+.bg_pilihan  {
+    position: relative;
+    margin: 20px 0;
+    display: block;
+    font-size: 18px;
+    padding: -10px;
+}
+
+.bg_pilihan :hover  {
+    cursor: pointer;
+}
+
+ 
+.bg_pilihan input {
+    position: absolute;
+    margin: 5px;
+    padding: 0;
+    visibility: hidden;
+}
+
+.bg_pilihan .textnya  {
+    margin-left: 30px;
+    margin-bottom: 0;
+}
+
+.nav_pilihan {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #39A7FF;
+    background-color: white;
+}
+
+.nav_pilihan:after {
+    content: "";
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    background: #39A7FF;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.nav_pilihan {
+    border-radius: 50%;
+}
+
+.nav_pilihan:after {
+    border-radius: 50%;
+}
+
+input[type="radio"]:checked+span .nav_pilihan:after {
+    display: block;
+}
+
+/* akhir button */
+
+
+.nav_sebelum { 
+    color: white;
+    width: 20%;
+    padding: 5px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 5px; 
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 3%;
+}
+ 
+
+.nav_sebelum p {
+    font-size: 18px;
+}
+
+.nav_selanjut { 
+    color: white;
+    width: 20%;
+    padding: 5px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 5px; 
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 3%;
+
+}
+ 
+.nav_selanjut p {
+    font-size: 18px;
+}
+
+p{
+    display: inline;
+}
+
+.dataaa {
+    min-height: 400px; 
+}
+
+.skornya {
+    margin-top: 10px;
+    margin-left: 0px;
+    font-size: 23px;
+    padding-top: 10px 0px;
+    min-height: 450px;
+    border-radius: 5px;
+}
+
+.t_hasil {
+    border			: 3px solid #868583;
+    border-radius: 5px;
+    padding: 20px;
+    width: 50%;
+    text-align: justify;
+}
+
+.ket_hasil {
+    width: 150px;
+    font-size: 20px;
+    padding: 5px !important;
+}
+ 
+.petunjuk{  
+    width: 650px;
+}
+.feedback{
+    padding: 3px;
+}
+  /*tampilan HP*/
+  @media screen and (max-width: 992px){
+   
+  .main {  
+    margin			: 10px; 
+	padding			:20px; 
+	height			: 620px;
+	overflow-y		: auto; 
+	background-color: #f7f7e8;
+	overflow-x		: hidden;
+    width: 100%;
+    left: -100px;
+}  
+  .kembali:hover{
+    background-color: #187bcd;
+    color: white;
+  }
+   .kanan {
+    background-color: white;
+    width: 99%;
+    height: auto;
+    margin-top: 5px;
+    padding: 15px;
+    text-align: justify; 
+  } 
+  .kiri {
+    background-color: white;
+    width: 99%;
+    height: auto;
+    margin-top: 5px;
+    padding: 15px;
+    text-align: justify; 
+  
+  }   
+ 
+label {
+    width: 90%;
+}
+ 
+.bg_soal span {
+    padding: 2px;
+    display: inline-block;
+    width: 100px;
+    margin-bottom: 5px;
+    text-align: center;
+    border-radius: 5px;
+}
+.soal_nav {
+    width: 10%;
+    height: 20%;
+    margin-left: 8.5%;
+}
+.nav_sebelum {
+    width: 26%;
+}
+.nav_sebelum p {
+    font-size: 14px;
+}
+.nav_selanjut {
+    width: 26%;
+}
+.nav_selanjut p {
+    font-size: 14px;
+}
+.no {
+    padding: 10px;
+}
+.no p {
+    margin-left: 10px;
+}
+.inti_pertanyaan {
+    padding: 5px 10px;
+}
+.nav_pilihan {
+    width: 16px;
+    height: 16px;
+}
+.nav_pilihan:after {
+    width: 12px;
+    height: 12px;
+}
+.bg_pilihan  {
+    font-size: 16px;
+}
+.t_hasil{  
+    width: 100%;
+    font-size: 14px;
+}
+.petunjuk{  
+    width: 500px;
+}
+  }

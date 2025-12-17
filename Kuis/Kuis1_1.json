@@ -1,0 +1,103 @@
+[
+    {
+      "soal0": {
+        "soal": "Tabung tidak memiliki titik sudut karena....",
+        "a": "Bentuknya lingkaran",
+        "b": "Tidak ada garis yang berpotongan",
+        "c": "Sisinya lengkung",
+        "d": "Sisi alasnya berbentuk lingkaran",
+        "benar": "b"
+      }
+    },
+    {
+      "soal1": {
+        "soal": "Perhatikan gambar dibawah ini!1.<br><div class='text-center'><img src='img/bebek.jpg' class='w-50'></div> Bangun ruang di atas termasuk bangun ruang dalam bidang  ....",
+        "a": "Bidang lengkung",
+        "b": "Bidang lingkaran",
+        "c": "Bidang datar",
+        "d": "Bidang gambar",
+        "benar": "c"
+      }
+    },
+    {
+      "soal2": {
+        "soal": "Dadu dan rubik termasuk dalam bangun ruang bentuk ....",
+        "a": "Balok",
+        "b": "Kubus",
+        "c": "Prisma",
+        "d": "Bola",
+        "benar": "b"
+      }
+    },
+    {
+      "soal3": {
+        "soal": "Sebuah papan kayu memiliki panjang 3 m, lebar 30 cm, dan tinggi 10 cm. Berdasarkan pernyataan tersebut, kayu tersebut berbentuk bangun ....",
+        "a": "Kubus",
+        "b": "Prisma",
+        "c": "Persegi Panjang ",
+        "d": "Balok",
+        "benar": "b"
+      }
+    },
+    {
+      "soal4": {
+        "soal": "Perhatikan gambar di bawah ini, manakah yang bukan termasuk prisma ....",
+        "a": "<div class='text-center'><img src='img/bebek.jpg' class='w-50'></div>",
+        "b": "<div class='text-center'><img src='img/bebek.jpg' class='w-50'></div>",
+        "c": "<div class='text-center'><img src='img/bebek.jpg' class='w-50'></div>",
+        "d": "<div class='text-center'><img src='img/bebek.jpg' class='w-50'></div>",
+        "benar": "a"
+      }
+    },
+    {
+      "soal5": {
+        "soal": "Berapa banyak titik sudut, rusuk, dan sisi pada prisma segi sepuluh....",
+        "a": "30, 20, 12 ",
+        "b": "20, 30, 12",
+        "c": "20, 30, 13",
+        "d": "30, 20, 13",
+        "benar": "b"
+      }
+    },
+    {
+      "soal6": {
+        "soal": "Bagian tabung yang berbentuk lingkaran dan terletak dibagian atas disebut  ....",
+        "a": "Selimut tabung",
+        "b": "Alas tabung",
+        "c": "Tutup tabung",
+        "d": "Jari-jari tabung",
+        "benar": "c"
+      }
+    },
+    {
+      "soal7": {
+        "soal": "Bidang lengkung yang mengitari tabung disebut....",
+        "a": "Diameter",
+        "b": "Selimut tabung",
+        "c": "Alas tabung",
+        "d": "Tinggi tabung",
+        "benar": "b"
+      }
+    },
+    {
+      "soal8": {
+        "soal": "Suatu jarak antara rusuk tabung dengan titik pusat lingkaran tabung disebut....",
+        "a": "Diameter",
+        "b": "Tinggi tabung",
+        "c": "Jari-jari tabung",
+        "d": "Rusuk tabung",
+        "benar": "c"
+      }
+    },
+    {
+      "soal9": {
+        "soal": "Jumlah rusuk pada sebuah tabung adalah....",
+        "a": "1 rusuk",
+        "b": "2 rusuk",
+        "c": "3 rusuk",
+        "d": "4 rusuk",
+        "benar": "b"
+      }
+    }
+  ]
+  

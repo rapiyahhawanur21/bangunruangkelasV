@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Kuis 1 | Bangun Ruang</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Style/materi.css.css" />
+    <link rel="stylesheet" href="../bootstrap/css/Bootstrap.min.css" />
+    <link rel="stylesheet" href="../fontawesome-free-6.5.2-web/css/all.min.css" />
+    <style>
+      @media screen and (max-width: 280px) {
+        .navbar-brand {
+          font-size: 0.8rem !important;
+        }
+        .navbar-brand-icon img {
+          width: 15px !important;
+        }
+        .keluar {
+          font-size: 0.75rem !important;
+        }
+        .sb-topnav .navbar-brand {
+          width: auto;
+        }
+      }
+      @media screen and (max-width: 700px) {
+        .sb-topnav .navbar-brand {
+          width: auto;
+        }
+        .keluar {
+          padding: 0.25rem;
+          font-size: 1rem;
+        }
+        .navbar-brand {
+          font-size: 1.075rem;
+        }
+        .ket {
+          margin-left: 4.25%;
+          font-size: xx-small !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="sb-nav-fixed" onload="readlah()">
+    <nav class="sb-topnav navbar navbar-expand navbar-dark" style="background-color: #a2cdcd">
+      <!-- Navbar Brand-->
+      <a class="navbar-brand d-flex px-1" href="#">
+        <div class="navbar-brand-icon">
+          <img src="../image/logo5.png" style="width: 25px" />
+        </div>
+        <div class="navbar-brand-text px-1 fw-bold">Bangun Ruang</div>
+      </a>
+      <div class="ms-auto me-1">
+        <div class="keluar btn btn-danger btn-md shadow" id="logout" onclick="btnLogout()">Keluar<i class="fa-solid fa-right-from-bracket ms-2"></i></div>
+      </div>
+    </nav>
+
+    <div id="layoutSidenav">
+      <div id="layoutSidenav_content2">
+        <div class="container-fluid" id="data">
+          <div class="row text-center" style="background-color: #0d6efd">
+            <h4 class="fw-bold my-3">Kuis 1</h4>
+          </div>
+
+          <div class="container">
+            <div class="row my-5 justify-content-evenly">
+              <div class="col-sm-5 border border-primary">
+                <h5 class="mt-3 text-center fw-bold">Petunjuk Pengerjaan</h5>
+                <hr class="border border-primary opacity-75" />
+                <ol style="text-align: justify">
+                  <p>
+                    <li class="fs-5">Kuis ini terdiri dari 10 soal.</li>
+                    <li class="fs-5">Setiap soal memiliki 10 poin.</li>
+                    <li class="fs-5">Tekan "Mulai Kuis", jika data diri kamu sudah benar.</li>
+                    <li class="fs-5">Setiap pertanyaan memiliki empat pilihan jawaban yang ditandai dengan huruf A, B, C, dan D.</li>
+                    <li class="fs-5">Pilihlah satu jawaban yang paling benar untuk setiap pertanyaan.</li>
+                    <li class="fs-5">Setelah semua soal selesai dijawab, klik "Selesai" untuk menyelesaikan kuis.</li>
+                  </p>
+                </ol>
+              </div>
+
+              <div class="col-sm-5 border border-primary">
+                <h5>
+                  <div class="mt-3 text-center fw-bold">Identitas Siswa</div>
+                  <hr class="border border-primary opacity-75" />
+                  <div class="data_diri">
+                    <div class="table-responsive">
+                      <table class="table table-borderless align-middle">
+                        <tr>
+                          <td class="col-4">Nama</td>
+                          <td class="col-1">:</td>
+                          <td class="col-7"><span class="form-control form-control-sm" id="userlink"></span></td>
+                        </tr>
+                        <tr>
+                          <td>NISN</td>
+                          <td>:</td>
+                          <td><span class="form-control form-control-sm" id="nisnlink"></span></td>
+                        </tr>
+                        <tr>
+                          <td>Kelas</td>
+                          <td>:</td>
+                          <td><span class="form-control form-control-sm" id="kelaslink"></span></td>
+                        </tr>
+                        <tr>
+                          <td>Sekolah</td>
+                          <td>:</td>
+                          <td><span class="form-control form-control-sm" id="sekolahlink"></span></td>
+                        </tr>
+                      </table>
+                    </div>
+                    <br />
+                    <div class="d-grid gap-2 d-md-block">
+                      <a class="btn btn-danger" href="../Materi1.html">Kembali Ke Materi</a>
+                      <div class="button btn btn-primary">Mulai Kuis</div>
+                    </div>
+                  </div>
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row border border-5 border-primary border-opacity-25">
+            <!--KONTEN KIRI-->
+            <div class="kiri border-end border-5 border-primary border-opacity-25 px-1 w-25" id="kiri">
+              <div class="fw-bold">
+                <div class="my-3 text-center fs-5">Nomor Soal</div>
+
+                <div class="pt-3 border border-primary border-opacity-10 rounded">
+                  <div class="ms-3">
+                    <div class="soal_nav belum">
+                      <p class="m-2">1</p>
+                    </div>
+                    <div class="soal_nav belum">
+                      <p class="m-2">2</p>
+                    </div>
+                    <div class="soal_nav belum">
+                      <p class="m-2">3</p>
+                    </div>
+                    <div class="soal_nav belum">
+                      <p class="m-2">4</p>
+                    </div>
+                    <div class="soal_nav belum">
+                      <p class="m-2">5</p>
+                    </div>
+                    <div class="soal_nav belum">
+                      <p class="m-2">6</p>
+                    </div>
+                    <div class="soal_nav belum">
+                      <p class="m-2">7</p>
+                    </div>
+                    <div class="soal_nav belum">
+                      <p class="m-2">8</p>
+                    </div>
+                    <div class="soal_nav belum">
+                      <p class="m-2">9</p>
+                    </div>
+                    <div class="soal_nav belum">
+                      <p class="mx-1 my-2">10</p>
+                    </div>
+                  </div>
+                  <div class="clear"></div>
+                  <br />
+                  <div class="ket">
+                    <p>Keterangan:</p>
+                    <p><span class="belum p-1 rounded">Putih</span> = Belum dijawab</p>
+                    <p><span class="sudah px-2 py-1 rounded">Biru</span> = Sudah dijawab</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row justify-content-center">
+                <div class="col-sm-6 mx-0 p-0 my-3 text-center">
+                  <button class="selesai btn btn-success">Selesai</button>
+                </div>
+              </div>
+            </div>
+            <!-- BATAS KONTEN KIRI-->
+
+            <!--KONTEN KANAN-->
+            <div class="kanan mb-3 py-2 px-5 w-75" id="kanan" style="text-align: justify">
+              <div class="row text-center" style="background-color: #0d6efd">
+                <h4 class="fw-bold my-3">Kuis 1</h4>
+              </div>
+
+              <div class="row">
+                <div class="col mt-2">
+                  <div class="float-end border border-3 border-primary border-opacity-10 rounded p-2 text-center" id="time"><i class="fas fa-clock"></i>30 : 00</div>
+                </div>
+              </div>
+
+              <!--NOMOR 1-->
+              <div class="bg_pertanyaan" id="bg_pertanyaan">
+                <div class="py-2">
+                  <div class="soal">
+                    <hr class="mt-0" />
+                    <div class="fw-bold fs-5">
+                      <b>Nomor <span id="nomornya"></span></b>
+                    </div>
+                  </div>
+                </div>
+                <div class="fs-5">
+                  <p id="soalnya"></p>
+
+                  <div class="soall">
+                    <label class="bg_pilihan">
+                      <input id="radio1" type="radio" name="radio1" value="a" />
+                      <span class="textnya">
+                        <span class="nav_pilihan"></span>
+                        <p class="d-inline" id="pilihannya0"></p>
+                      </span>
+                    </label>
+
+                    <label class="bg_pilihan">
+                      <input id="radio1" type="radio" name="radio1" value="b" />
+                      <span class="textnya">
+                        <span class="nav_pilihan"></span>
+                        <p class="d-inline" id="pilihannya1"></p>
+                      </span>
+                    </label>
+
+                    <label class="bg_pilihan">
+                      <input id="radio1" type="radio" name="radio1" value="c" />
+                      <span class="textnya">
+                        <span class="nav_pilihan"></span>
+                        <p class="d-inline" id="pilihannya2"></p>
+                      </span>
+                    </label>
+
+                    <label class="bg_pilihan">
+                      <input id="radio1" type="radio" name="radio1" value="d" />
+                      <span class="textnya">
+                        <span class="nav_pilihan"></span>
+                        <p class="d-inline" id="pilihannya3"></p>
+                      </span>
+                    </label>
+                  </div>
+
+                  <div class="d-grid gap-2 d-md-block">
+                    <div class="nav_sebelum btn btn-danger" id="nav_sebelum">Sebelumnya</div>
+                    <div class="nav_selanjut btn btn-primary" id="nav_selanjut">Selanjutnya</div>
+                  </div>
+                </div>
+              </div>
+
+              <!--NOMOR 2-->
+              <div class="bg_pertanyaan" id="bg_pertanyaan">
+                <div class="py-2">
+                  <div class="soal">
+                    <hr class="mt-0" />
+                    <div class="fw-bold fs-5">
+                      <b>Nomor <span id="nomornya"></span></b>
+                    </div>
+                  </div>
+                </div>
+                <div class="fs-5">
+                  <p id="soalnya"></p>
+
+                  <div class="soall">
+                    <label class="bg_pilihan">
+                      <input id="radio2" type="radio" name="radio2" value="a" />
+                      <span class="textnya">
+                        <span class="nav_pilihan"></span>
+                        <p class="d-inline" id="pilihannya0"></p>
+                      </span>
+                    </label>
+
+                    <label class="bg_pilihan">
+                      <input id="radio2" type="radio" name="radio2" value="b" />
+                      <span class="textnya">
+                        <span class="nav_pilihan"></span>
+                        <p class="d-inline" id="pilihannya1"></p>
+                      </span>
+                    </label>
+
+                    <label class="bg_pilihan">
+                      <input id="radio2" type="radio" name="radio2" value="c" />
+                      <span class="textnya">
+                        <span class="nav_pilihan"></span>
+                        <p class="d-inline" id="pilihannya2"></p>
+                      </span>
+                    </label>
+
+                    <label class="bg_pilihan">
+                      <input id="radio2" type="radio" name="radio2" value="d" />
+                      <span class="textnya">
+                        <span class="nav_pilihan"></span>
+                        <p class="d-inline" id="pilihannya3"></p>
+                      </span>
+                    </label>
+                  </div>
+
+                  <div class="d-grid gap-2 d-md-block">
+                    <div class="nav_sebelum btn btn-danger" id="nav_sebelum">Sebelumnya</div>
+                    <div class="nav_selanjut btn btn-primary" id="nav_selanjut">Selanjutnya</div>
+                  </div>
+                </div>
+              </div>
+
+              <!--NOMOR 3-->
+              <div class="bg_pertanyaan" id="bg_pertanyaan">
+                <div class="py-2">
+                  <div class="soal">
+                    <hr class="mt-0" />
+                    <div class="fw-bold fs-5">
+                      <b>Nomor <span id="nomornya"></span></b>
+                    </div>
+                  </div>
+                </div>
+                <div class="fs-5">
+                  <p id="soalnya"></p>
+
+                  <div class="soall">
+                    <label class="bg_pilihan">
+                      <input id="radio3" type="radio" name="radio3" value="a" />
+                      <span class="textnya">
+                        <span class="nav_pilihan"></span>
+                        <p class="d-inline" id="pilihannya0"></p>
+                      </span>
+                    </label>
+
+                    <label class="bg_pilihan">
+                      <input id="radio3" type="radio" name="radio3" value="b" />
+                      <span class="textnya">
+                        <span class="nav_pilihan"></span>
+                        <p class="d-inline" id="pilihannya1"></p>
+                      </span>
+                    </label>
+
+                    <label class="bg_pilihan">
+                      <input id="radio3" type="radio" name="radio3" value="c" />
+                      <span class="textnya">
+                        <span class="nav_pilihan"></span>
+                        <p class="d-inline" id="pilihannya2"></p>
+                      </span>
+                    </label>
+
+                    <label class="bg_pilihan">
+                      <input id="radio3" type="radio" name="radio3" value="d" />
+                      <span class="textnya">
+                        <span class="nav_pilihan"></span>
+                        <p class="d-inline" id="pilihannya3"></p>
+                      </span>
+                    </label>
+                  </div>
+
+                  <div class="d-grid gap-2 d-md-block">
+                    <div class="nav_sebelum btn btn-danger" id="nav_sebelum">Sebelumnya</div>
+                    <div class="nav_selanjut btn btn-primary" id="nav_selanjut">Selanjutnya</div>
+                  </div>
+                </div>
+              </div>
+
+              <!--NOMOR 4-->
+              <div class="bg_pertanyaan" id="bg_pertanyaan">
+                <div class="py-2">
+                  <div class="soal">
+                    <hr class="mt-0" />
+                    <div class="fw-bold fs-5">
+                      <b>Nomor <span id="nomornya"></span></b>
+                    </div>
+                  </div>
+                </div>
+                <div class="fs-5">
+                  <p id="soalnya"></p>
+
+                  <div class="soall">
+                    <label class="bg_pilihan">
+                      <input id="radio4" type="radio" name="radio4" value="a" />
+                      <span class="textnya">
+                        <span class="nav_pilihan"></span>
+                        <p class="d-inline" id="pilihannya0"></p>
+                      </span>
+                    </label>
+
+                    <label class="bg_pilihan">
+                      <input id="radio4" type="radio" name="radio4" value="b" />
+                      <span class="textnya">
+                        <span class="nav_pilihan"></span>
+                        <p class="d-inline" id="pilihannya1"></p>
+                      </span>
+                    </label>
+
+                    <label class="bg_pilihan">
+                      <input id="radio4" type="radio" name="radio4" value="c" />
+                      <span class="textnya">
+                        <span class="nav_pilihan"></span>
+                        <p class="d-inline" id="pilihannya2"></p>
+                      </span>
+                    </label>
+
+                    <label class="bg_pilihan">
+                      <input id="radio4" type="radio" name="radio4" value="d" />
+                      <span class="textnya">
+                        <span class="nav_pilihan"></span>
+                        <p class="d-inline" id="pilihannya3"></p>
+                      </span>
+                    </label>
+                  </div>
+
+                  <div class="d-grid gap-2 d-md-block">
+                    <div class="nav_sebelum btn btn-danger" id="nav_sebelum">Sebelumnya</div>
+                    <div class="nav_selanjut btn btn-primary" id="nav_selanjut">Selanjutnya</div>
+                  </div>
+                </div>
+              </div>
+
+              <!--NOMOR 5-->
+              <div class="bg_pertanyaan" id="bg_pertanyaan">
+                <div class="py-2">
+                  <div class="soal">
+                    <hr class="mt-0" />
+                    <div class="fw-bold fs-5">
+                      <b>Nomor <span id="nomornya"></span></b>
+                    </div>
+                  </div>
+                </div>
+                <div class="fs-5">
+                  <p id="soalnya"></p>
+
+                  <div class="soall">
+                    <label class="bg_pilihan">
+                      <input id="radio5" type="radio" name="radio5" value="a" />
+                      <span class="textnya">
+                        <span class="nav_pilihan"></span>
+                        <p class="d-inline" id="pilihannya0"></p>
+                      </span>
+                    </label>
+
+                    <label class="bg_pilihan">
+                      <input id="radio5" type="radio" name="radio5" value="b" />
+                      <span class="textnya">
+                        <span class="nav_pilihan"></span>
+                        <p class="d-inline" id="pilihannya1"></p>
+                      </span>
+                    </label>
+
+                    <label class="bg_pilihan">
+                      <input id="radio5" type="radio" name="radio5" value="c" />
+                      <span class="textnya">
+                        <span class="nav_pilihan"></span>
+                        <p class="d-inline" id="pilihannya2"></p>
+                      </span>
+                    </label>
+
+                    <label class="bg_pilihan">
+                      <input id="radio5" type="radio" name="radio5" value="d" />
+                      <span class="textnya">
+                        <span class="nav_pilihan"></span>
+                        <p class="d-inline" id="pilihannya3"></p>
+                      </span>
+                    </label>
+                  </div>
+
+                  <div class="d-grid gap-2 d-md-block">
+                    <div class="nav_sebelum btn btn-danger" id="nav_sebelum">Sebelumnya</div>
+                    <div class="nav_selanjut btn btn-primary" id="nav_selanjut">Selanjutnya</div>
+                  </div>
+                </div>
+              </div>
+
+              <!--NOMOR 6-->
+              <div class="bg_pertanyaan" id="bg_pertanyaan">
+                <div class="py-2">
+                  <div class="soal">
+                    <hr class="mt-0" />
+                    <div class="fw-bold fs-5">
+                      <b>Nomor <span id="nomornya"></span></b>
+                    </div>
+                  </div>
+                </div>
+                <div class="fs-5">
+                  <p id="soalnya"></p>
+
+                  <div class="soall">
+                    <label class="bg_pilihan">
+                      <input id="radio6" type="radio" name="radio6" value="a" />
+                      <span class="textnya">
+                        <span class="nav_pilihan"></span>
+                        <p class="d-inline" id="pilihannya0"></p>
+                      </span>
+                    </label>
+
+                    <label class="bg_pilihan">
+                      <input id="radio6" type="radio" name="radio6" value="b" />
+                      <span class="textnya">
+                        <span class="nav_pilihan"></span>
+                        <p class="d-inline" id="pilihannya1"></p>
+                      </span>
+                    </label>
+
+                    <label class="bg_pilihan">
+                      <input id="radio6" type="radio" name="radio6" value="c" />
+                      <span class="textnya">
+                        <span class="nav_pilihan"></span>
+                        <p class="d-inline" id="pilihannya2"></p>
+                      </span>
+                    </label>
+
+                    <label class="bg_pilihan">
+                      <input id="radio6" type="radio" name="radio6" value="d" />
+                      <span class="textnya">
+                        <span class="nav_pilihan"></span>
+                        <p class="d-inline" id="pilihannya3"></p>
+                      </span>
+                    </label>
+                  </div>
+
+                  <div class="d-grid gap-2 d-md-block">
+                    <div class="nav_sebelum btn btn-danger" id="nav_sebelum">Sebelumnya</div>
+                    <div class="nav_selanjut btn btn-primary" id="nav_selanjut">Selanjutnya</div>
+                  </div>
+                </div>
+              </div>
+
+              <!--NOMOR 7-->
+              <div class="bg_pertanyaan" id="bg_pertanyaan">
+                <div class="py-2">
+                  <div class="soal">
+                    <hr class="mt-0" />
+                    <div class="fw-bold fs-5">
+                      <b>Nomor <span id="nomornya"></span></b>
+                    </div>
+                  </div>
+                </div>
+                <div class="fs-5">
+                  <p id="soalnya"></p>
+
+                  <div class="soall">
+                    <label class="bg_pilihan">
+                      <input id="radio7" type="radio" name="radio7" value="a" />
+                      <span class="textnya">
+                        <span class="nav_pilihan"></span>
+                        <p class="d-inline" id="pilihannya0"></p>
+                      </span>
+                    </label>
+
+                    <label class="bg_pilihan">
+                      <input id="radio7" type="radio" name="radio7" value="b" />
+                      <span class="textnya">
+                        <span class="nav_pilihan"></span>
+                        <p class="d-inline" id="pilihannya1"></p>
+                      </span>
+                    </label>
+
+                    <label class="bg_pilihan">
+                      <input id="radio7" type="radio" name="radio7" value="c" />
+                      <span class="textnya">
+                        <span class="nav_pilihan"></span>
+                        <p class="d-inline" id="pilihannya2"></p>
+                      </span>
+                    </label>
+
+                    <label class="bg_pilihan">
+                      <input id="radio7" type="radio" name="radio7" value="d" />
+                      <span class="textnya">
+                        <span class="nav_pilihan"></span>
+                        <p class="d-inline" id="pilihannya3"></p>
+                      </span>
+                    </label>
+                  </div>
+
+                  <div class="d-grid gap-2 d-md-block">
+                    <div class="nav_sebelum btn btn-danger" id="nav_sebelum">Sebelumnya</div>
+                    <div class="nav_selanjut btn btn-primary" id="nav_selanjut">Selanjutnya</div>
+                  </div>
+                </div>
+              </div>
+
+              <!--NOMOR 8-->
+              <div class="bg_pertanyaan" id="bg_pertanyaan">
+                <div class="py-2">
+                  <div class="soal">
+                    <hr class="mt-0" />
+                    <div class="fw-bold fs-5">
+                      <b>Nomor <span id="nomornya"></span></b>
+                    </div>
+                  </div>
+                </div>
+                <div class="fs-5">
+                  <p id="soalnya"></p>
+
+                  <div class="soall">
+                    <label class="bg_pilihan">
+                      <input id="radio8" type="radio" name="radio8" value="a" />
+                      <span class="textnya">
+                        <span class="nav_pilihan"></span>
+                        <p class="d-inline" id="pilihannya0"></p>
+                      </span>
+                    </label>
+
+                    <label class="bg_pilihan">
+                      <input id="radio8" type="radio" name="radio8" value="b" />
+                      <span class="textnya">
+                        <span class="nav_pilihan"></span>
+                        <p class="d-inline" id="pilihannya1"></p>
+                      </span>
+                    </label>
+
+                    <label class="bg_pilihan">
+                      <input id="radio8" type="radio" name="radio8" value="c" />
+                      <span class="textnya">
+                        <span class="nav_pilihan"></span>
+                        <p class="d-inline" id="pilihannya2"></p>
+                      </span>
+                    </label>
+
+                    <label class="bg_pilihan">
+                      <input id="radio8" type="radio" name="radio8" value="d" />
+                      <span class="textnya">
+                        <span class="nav_pilihan"></span>
+                        <p class="d-inline" id="pilihannya3"></p>
+                      </span>
+                    </label>
+                  </div>
+
+                  <div class="d-grid gap-2 d-md-block">
+                    <div class="nav_sebelum btn btn-danger" id="nav_sebelum">Sebelumnya</div>
+                    <div class="nav_selanjut btn btn-primary" id="nav_selanjut">Selanjutnya</div>
+                  </div>
+                </div>
+              </div>
+
+              <!--NOMOR 9-->
+              <div class="bg_pertanyaan" id="bg_pertanyaan">
+                <div class="py-2">
+                  <div class="soal">
+                    <hr class="mt-0" />
+                    <div class="fw-bold fs-5">
+                      <b>Nomor <span id="nomornya"></span></b>
+                    </div>
+                  </div>
+                </div>
+                <div class="fs-5">
+                  <p id="soalnya"></p>
+
+                  <div class="soall">
+                    <label class="bg_pilihan">
+                      <input id="radio9" type="radio" name="radio9" value="a" />
+                      <span class="textnya">
+                        <span class="nav_pilihan"></span>
+                        <p class="d-inline" id="pilihannya0"></p>
+                      </span>
+                    </label>
+
+                    <label class="bg_pilihan">
+                      <input id="radio9" type="radio" name="radio9" value="b" />
+                      <span class="textnya">
+                        <span class="nav_pilihan"></span>
+                        <p class="d-inline" id="pilihannya1"></p>
+                      </span>
+                    </label>
+
+                    <label class="bg_pilihan">
+                      <input id="radio9" type="radio" name="radio9" value="c" />
+                      <span class="textnya">
+                        <span class="nav_pilihan"></span>
+                        <p class="d-inline" id="pilihannya2"></p>
+                      </span>
+                    </label>
+
+                    <label class="bg_pilihan">
+                      <input id="radio9" type="radio" name="radio9" value="d" />
+                      <span class="textnya">
+                        <span class="nav_pilihan"></span>
+                        <p class="d-inline" id="pilihannya3"></p>
+                      </span>
+                    </label>
+                  </div>
+
+                  <div class="d-grid gap-2 d-md-block">
+                    <div class="nav_sebelum btn btn-danger" id="nav_sebelum">Sebelumnya</div>
+                    <div class="nav_selanjut btn btn-primary" id="nav_selanjut">Selanjutnya</div>
+                  </div>
+                </div>
+              </div>
+
+              <!--NOMOR 10-->
+              <div class="bg_pertanyaan" id="bg_pertanyaan">
+                <div class="py-2">
+                  <div class="soal">
+                    <hr class="mt-0" />
+                    <div class="fw-bold fs-5">
+                      <b>Nomor <span id="nomornya"></span></b>
+                    </div>
+                  </div>
+                </div>
+                <div class="fs-5">
+                  <p id="soalnya"></p>
+
+                  <div class="soall">
+                    <label class="bg_pilihan">
+                      <input id="radio10" type="radio" name="radio10" value="a" />
+                      <span class="textnya">
+                        <span class="nav_pilihan"></span>
+                        <p class="d-inline" id="pilihannya0"></p>
+                      </span>
+                    </label>
+
+                    <label class="bg_pilihan">
+                      <input id="radio10" type="radio" name="radio10" value="b" />
+                      <span class="textnya">
+                        <span class="nav_pilihan"></span>
+                        <p class="d-inline" id="pilihannya1"></p>
+                      </span>
+                    </label>
+
+                    <label class="bg_pilihan">
+                      <input id="radio10" type="radio" name="radio10" value="c" />
+                      <span class="textnya">
+                        <span class="nav_pilihan"></span>
+                        <p class="d-inline" id="pilihannya2"></p>
+                      </span>
+                    </label>
+
+                    <label class="bg_pilihan">
+                      <input id="radio10" type="radio" name="radio10" value="d" />
+                      <span class="textnya">
+                        <span class="nav_pilihan"></span>
+                        <p class="d-inline" id="pilihannya3"></p>
+                      </span>
+                    </label>
+                  </div>
+
+                  <div class="d-grid gap-2 d-md-block">
+                    <div class="nav_sebelum btn btn-danger" id="nav_sebelum">Sebelumnya</div>
+                    <div class="nav_selanjut btn btn-primary" id="nav_selanjut">Selanjutnya</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--BATAS KONTEN KANAN-->
+
+            <!-- SKOR-->
+            <div class="dataaa hilang" id="halskor">
+              <div class="mt-0">
+                <div class="row mb-3 text-center" style="background-color: #0d6efd">
+                  <h4 class="fw-bold my-3 text-white">Hasil Kuis 1</h4>
+                </div>
+
+                <div class="row justify-content-center">
+                  <div class="col-sm-6">
+                    <div class="table-responsive">
+                      <table class="table table-primary table-borderless fs-5">
+                        <tr>
+                          <td class="ket_hasil">Nama Lengkap</td>
+                          <td>:</td>
+                          <td class="nama"></td>
+                        </tr>
+                        <tr>
+                          <td class="ket_hasil">NISN</td>
+                          <td>:</td>
+                          <td class="nisn"></td>
+                        </tr>
+                        <tr>
+                          <td class="ket_hasil">Kelas</td>
+                          <td>:</td>
+                          <td class="kelas"></td>
+                        </tr>
+                        <tr>
+                          <td class="ket_hasil">Sekolah</td>
+                          <td>:</td>
+                          <td class="sekolah"></td>
+                        </tr>
+
+                        <tr>
+                          <td class="ket_hasil">Hari, Tgl</td>
+                          <td>:</td>
+                          <td class="hari"></td>
+                        </tr>
+                        <tr>
+                          <td class="ket_hasil">Waktu Selesai</td>
+                          <td>:</td>
+                          <td class="waktu"></td>
+                        </tr>
+                        <tr>
+                          <td class="ket_hasil">Nilai</td>
+                          <td>:</td>
+                          <td class="hasill"></td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="text-center">
+                  <!--<a class="mb-3 button btn btn-danger" href="../file/materi1.html">Kembali Ke Materi</a>-->
+                  <div id="ulang" class="fw-bold hilang">
+                    <h5 class="text-danger">Kamu belum lulus, nilaimu masih belum memenuhi KKM</h5>
+                    <br />
+                    <a href="kuis1.html" class="mb-3 button btn btn-danger">Ulang Kuis</a>
+                    <a class="mb-3 button btn btn-primary" href="../Materi1.html">Kembali Ke Materi</a>
+                  </div>
+                  <div id="materi" class="fw-bold hilang">
+                    <h5 class="text-success">Selamat kamu berhasil, kamu dapat melanjutkan ke materi selanjutnya</h5>
+                    <br />
+                    <a class="mb-3 button btn btn-success" href="../Materi2.html">Materi Selanjutnya</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../javascript/Cekmateri.js" type="module"></script>
+    <script src="../javascript/Script.js"></script>
+
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+      import { getDatabase, ref, get, set, push, child, onChildAdded, onValue, update } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyDWh1xc2xa3yXvMQB8XvlSTBDuVgscys0g",
+        authDomain: "adaptasi-makhluk-hidup.firebaseapp.com",
+        databaseURL: "https://adaptasi-makhluk-hidup-default-rtdb.firebaseio.com",
+        projectId: "adaptasi-makhluk-hidup",
+        storageBucket: "adaptasi-makhluk-hidup.appspot.com",
+        messagingSenderId: "79561294632",
+        appId: "1:79561294632:web:ce280ab63adce5d115c61d",
+      };
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      //const db = getDatabase();
+
+      // reference
+      let userlink = document.getElementById("userlink");
+      let nisnlink = document.getElementById("nisnlink");
+      let kelaslink = document.getElementById("kelaslink");
+      let sekolahlink = document.getElementById("sekolahlink");
+
+      let nama = sessionStorage.getItem("nama");
+      let nisn = sessionStorage.getItem("nisn");
+      let kelas = sessionStorage.getItem("kelas");
+      let kelasID = sessionStorage.getItem("kelas-id");
+      let sekolah = sessionStorage.getItem("sekolah");
+
+      userlink.innerText = nama;
+      nisnlink.innerText = nisn;
+      kelaslink.innerText = kelas;
+      sekolahlink.innerText = sekolah;
+
+      let selanjutnya = document.querySelector(".button");
+      let datasiswa = document.querySelector(".data_diri");
+
+      selanjutnya.addEventListener("click", function () {
+        let nama = sessionStorage.getItem("nama");
+        let nisn = sessionStorage.getItem("nisn");
+        let kelas = sessionStorage.getItem("kelas");
+        let sekolah = sessionStorage.getItem("sekolah");
+
+        if (nama == null) {
+          alert("silahkan login terlebih dahulu");
+          window.location = "../index.html";
+        } else {
+          document.getElementById("data").className += " hilang";
+          datasiswa.className += " hilang";
+          document.getElementById("kiri").className = document.getElementById("kiri").className.replace("hilang", "");
+          document.getElementById("kanan").className = document.getElementById("kanan").className.replace("hilang", "");
+        }
+      });
+
+      function readlah() {
+        const db = getDatabase();
+        var task = ref(db, "kontrolkuis1/");
+        let tmp = document.querySelector("body");
+
+        onChildAdded(task, (data) => {
+          var taskvalue = data.val();
+
+          if (taskvalue.id == "12093499" && taskvalue.nilai == 0) {
+            tmp.innerHTML += '<div class = "full" > <p>HALAMAN TIDAK DAPAT DIAKSES</p> </div>';
+          } else {
+          }
+        });
+      }
+      window.onload = () => {
+        document.getElementById("kiri").className += " hilang";
+        document.getElementById("kanan").className += " hilang";
+
+        readlah();
+      };
+
+      //let wktu = document.querySelector("time");
+      //let nilaiwktu = 0;
+      // countDown();
+
+      let countDownDate = new Date().getTime();
+      // 10 menit
+      countDownDate += 601000;
+
+      var x = setInterval(function () {
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+
+        // Perhitungan waktu untuk menit dan detik
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("time").innerHTML = minutes + ":" + seconds;
+
+        if (distance < 0) {
+          let nilaiwktu;
+          clearInterval(x);
+          document.getElementById("time").innerHTML = "Waktu Selesai";
+          nilaiwktu = 1;
+        }
+      }, 1000);
+
+      // mengambil data dan menampilkannya
+      let dat = new XMLHttpRequest();
+      dat.onreadystatechange = function () {
+        let cek = 0;
+        cek = [];
+        let jwbs = [];
+        let hasilakhir = 0;
+        let benarr = 0;
+        let salahh = 0;
+
+        if (dat.readyState == 4 && dat.status == 200) {
+          // tangkap apapun respon yang diberikan, lalu diubah ke objek
+          let data = JSON.parse(this.responseText);
+          // melihat data
+          // console.log(data);
+
+          // acak urutan soal
+          // random urutan
+          for (let x = 0; x < 100; x++) {
+            // acak angka dengan batas length.data dan minimum 0
+            let angka = Math.floor(Math.random() * data.length) + 0;
+            cek.push(angka);
+          }
+          // membuang angka yang sama
+          cek = Array.from(new Set(cek));
+          console.log(cek);
+          // ambil data tertentu
+
+          for (let i = 0; i < cek.length; i++) {
+            let nilai = cek[i];
+
+            let soaldata = data[nilai]["soal" + nilai]["soal"];
+            let jwb0 = data[nilai]["soal" + nilai]["a"];
+            let jwb1 = data[nilai]["soal" + nilai]["b"];
+            let jwb2 = data[nilai]["soal" + nilai]["c"];
+            let jwb3 = data[nilai]["soal" + nilai]["d"];
+            let bnr = data[nilai]["soal" + nilai]["benar"];
+            let jwb = [jwb0, jwb1, jwb2, jwb3];
+            jwbs.push(bnr);
+
+            // nomor ke-
+            let nomor = document.querySelectorAll(".soal #nomornya");
+            nomor[i].innerHTML = i + 1;
+
+            // soal
+            let soal = document.querySelectorAll(".bg_pertanyaan #soalnya");
+            soal[i].innerHTML = soaldata;
+
+            // pilihan a
+            let piliha = document.querySelectorAll(".textnya #pilihannya0");
+            piliha[i].innerHTML = jwb0;
+
+            // pilihan b
+            let pilihb = document.querySelectorAll(".textnya #pilihannya1");
+            pilihb[i].innerHTML = jwb1;
+
+            // pilihan c
+            let pilihc = document.querySelectorAll(".textnya #pilihannya2");
+            pilihc[i].innerHTML = jwb2;
+
+            // pilihan d
+            let pilihd = document.querySelectorAll(".textnya #pilihannya3");
+            pilihd[i].innerHTML = jwb3;
+
+            let bg_pertanyaan = document.getElementsByClassName("bg_pertanyaan");
+
+            for (let u = 0; u < bg_pertanyaan.length; u++) {
+              if (u != 0) {
+                if (bg_pertanyaan[u].className.indexOf("hilang") == -1) {
+                  bg_pertanyaan[u].className += " hilang";
+                }
+              }
+            }
+          }
+
+          let bg_pertanyaan = document.getElementsByClassName("bg_pertanyaan");
+
+          // fungsi tombol lanjut
+          let lanjut = document.querySelectorAll(".nav_selanjut");
+          for (let y = 0; y < lanjut.length; y++) {
+            lanjut[y].addEventListener("click", function () {
+              if (lanjut[y].className.indexOf("disable") == -1) {
+                if (bg_pertanyaan[y].className.indexOf("hilang") == -1) {
+                  bg_pertanyaan[y + 1].className = bg_pertanyaan[y + 1].className.replace("hilang", "");
+                  bg_pertanyaan[y].className += " hilang";
+                }
+                console.log(bg_pertanyaan[y + 1]);
+              }
+            });
+          }
+
+          // fungsi tombol sebelumnya
+          let sebelum = document.querySelectorAll(".nav_sebelum");
+          for (let y = 0; y < sebelum.length; y++) {
+            sebelum[y].addEventListener("click", function () {
+              if (sebelum[y].className.indexOf("disable") == -1) {
+                if (bg_pertanyaan[y].className.indexOf("hilang") == -1) {
+                  bg_pertanyaan[y - 1].className = bg_pertanyaan[y - 1].className.replace("hilang", "");
+                  bg_pertanyaan[y].className += " hilang";
+                }
+              }
+            });
+          }
+
+          // navigasi soal
+          let soal_nav = document.querySelectorAll(".soal_nav");
+          for (let y = 0; y < soal_nav.length; y++) {
+            soal_nav[y].addEventListener("click", function () {
+              for (let u = 0; u < bg_pertanyaan.length; u++) {
+                if (bg_pertanyaan[u].className.indexOf("hilang") == -1) {
+                  bg_pertanyaan[u].className += " hilang";
+                }
+              }
+              bg_pertanyaan[y].className = bg_pertanyaan[y].className.replace("hilang", "");
+            });
+          }
+
+          // mewarnai soal yang sdh dijawab
+          let soall = document.querySelectorAll(".soall");
+          for (let y = 0; y < soall.length; y++) {
+            soall[y].addEventListener("click", function () {
+              let pilih = document.querySelectorAll(".bg_pilihan input");
+              for (let j = 0; j < pilih.length; j++) {
+                pilih[j].addEventListener("click", function () {
+                  soal_nav[y].className = soal_nav[y].className.replace("belum", "sudah");
+                });
+              }
+            });
+          }
+
+          // cek jawaban
+          let selesai = document.querySelector(".selesai");
+          let pil_user = [];
+          let new_jwb_urut = [];
+          let new_jwb_urut_no = [];
+
+          selesai.addEventListener("click", function () {
+            let sarat = 0;
+
+            for (let t = 0; t < jwbs.length; t++) {
+              if (soal_nav[t].className.indexOf("belum") == -1) {
+                sarat = sarat + 1;
+              }
+            }
+            console.log(sarat);
+            if (sarat == jwbs.length) {
+              // array kunci
+              // console.log(jwbs);
+              hasilakhir = 0;
+              benarr = 0;
+              salahh = jwbs.length;
+
+              for (let i = 0; i < jwbs.length; i++) {
+                let a = i + 1;
+                let namaradio = document.getElementsByName("radio" + a);
+                let checked = false;
+                for (let j = 0; j < namaradio.length; j++) {
+                  if (namaradio[j].checked) {
+                    checked = true;
+                    pil_user.push(namaradio[j].value);
+                    if (namaradio[j].value == jwbs[i]) {
+                      hasilakhir = hasilakhir + 10;
+                      benarr = benarr + 1;
+                    } else {
+                      hasilakhir = hasilakhir;
+                    }
+                  }
+                }
+              }
+
+              for (let i = 0; i < cek.length; i++) {
+                for (let j = 0; j < cek.length; j++) {
+                  if (i == cek[j]) {
+                    new_jwb_urut.push(pil_user[j]);
+                    new_jwb_urut_no.push(cek[j]);
+                  }
+                }
+              }
+
+              // simpan kedatabase
+              //console.log(nama);
+              //console.log(nisn);
+              //console.log(kelas);
+              //console.log(sekolah);
+              //console.log(hasilakhir);
+
+              const db = getDatabase();
+              update(ref(db, "datasiswa/" + sessionStorage.getItem("nisn") + "/kuis"), {
+                kuis1: hasilakhir,
+              })
+              localStorage.setItem("skkuis1", hasilakhir);
+              console.log(localStorage);
+              let waktunya = waktu();
+              let harinya = hari();
+
+              //if (hasilakhir >= 70) {
+              //localStorage.setItem("skkuis1", 1);
+              //} else {
+              //localStorage.setItem("skkuis1", 0);
+              //}
+
+              createTask(nama, nisn, kelasID, sekolah, hasilakhir, waktunya, harinya, new_jwb_urut);
+
+              let namaget = document.querySelector(".nama");
+              namaget.innerText = nama;
+
+              let nisnget = document.querySelector(".nisn");
+              nisnget.innerText = nisn;
+
+              let kelasget = document.querySelector(".kelas");
+              kelasget.innerText = kelas;
+
+              let sekolahget = document.querySelector(".sekolah");
+              sekolahget.innerText = sekolah;
+
+              let hariget = document.querySelector(".hari");
+              hariget.innerText = harinya;
+
+              let waktuget = document.querySelector(".waktu");
+              waktuget.innerText = waktunya;
+
+              let hasillget = document.querySelector(".hasill");
+              hasillget.innerText = hasilakhir;
+
+              let kirihilang = document.querySelector(".kiri");
+              kirihilang.className += " hilang";
+
+              let kananhilang = document.querySelector(".kanan");
+              kananhilang.className += " hilang";
+
+              let datanya = document.querySelector(".dataaa");
+              datanya.className = datanya.className.replace("hilang", "");
+
+              
+              const dbkkm = ref(db, "kkm/");
+              onValue(dbkkm, kkmSuccess, (snapshot) => {
+                const data = snapshot.val();
+                updateStarCount(postElement, data);
+              });
+
+              let getKKM;
+              function kkmSuccess(items1) {
+                getKKM = items1.val();
+
+                let kkm1 = items1.val()[0]["kkm"];
+                let kkm2 = items1.val()[1]["kkm"];
+                let kkm3 = items1.val()[2]["kkm"];
+                let kkm4 = items1.val()[3]["kkm"];
+
+                console.log(parseInt(kkm1));
+                // atur KKM
+                if (hasilakhir >= parseInt(kkm1)) {
+                  let materi = document.getElementById("materi");
+                  materi.className = materi.className.replace("hilang", "");
+                } else {
+                  let ulang = document.getElementById("ulang");
+                  ulang.className = ulang.className.replace("hilang", "");
+                }
+              }
+            } else {
+              alert("Masih ada soal yang belum dijawab, silahkan periksa kembali!");
+            }
+          });
+          // nilai disimpan ke local storage
+          //localStorage.setItem("skkuis1", hasilakhir);
+          console.log(localStorage);
+        }
+      };
+      dat.open("GET", "kuis1.json", true);
+      dat.send();
+
+      // FUNGSI WAKTU DAN HARI
+      var d = new Date();
+      var t = d.getTime();
+      var counter = t;
+
+      // ambil jamnya
+      window.setTimeout("waktu()", 1000);
+
+      function waktu() {
+        var tanggal = new Date();
+        setTimeout("waktu()", 1000);
+        return tanggal.getHours() + ":" + tanggal.getMinutes() + ":" + tanggal.getSeconds();
+      }
+
+      // harinya
+      function hari() {
+        let tanggallengkap = new String();
+        let namahari = "Minggu Senin Selasa Rabu Kamis Jumat Sabtu";
+        namahari = namahari.split(" ");
+        let namabulan = "Januari Februari Maret April Mei Juni Juli Agustus September Oktober November Desember";
+        namabulan = namabulan.split(" ");
+        let tgl = new Date();
+        let hari = tgl.getDay();
+        let tanggal = tgl.getDate();
+        let bulan = tgl.getMonth();
+        let tahun = tgl.getFullYear();
+        tanggallengkap = namahari[hari] + ", " + tanggal + " " + namabulan[bulan] + " " + tahun;
+        return tanggallengkap;
+      }
+
+      function createTask(nama, nisn, kelas, sekolah, nilai, waktunya, hari, jwb) {
+        const db = getDatabase();
+        const kuisId = push(child(ref(db), "kuis1")).key;
+        //counter += 1;
+        set(ref(db, "kuis1/" + kuisId), {
+          nama: nama,
+          nisn: nisn,
+          kelas: kelas,
+          sekolah: sekolah,
+          nilai: nilai,
+          waktu: waktunya,
+          hari: hari,
+          jawabannya: jwb,
+        });
+      }
+    </script>
+  </body>
+</html>

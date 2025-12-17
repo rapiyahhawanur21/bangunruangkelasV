@@ -1,0 +1,12 @@
+body {
+  font-family: "comic sans ms" !important;
+}
+
+.card-footer {
+  color: white !important;
+  background-color: #a2cdcd !important;
+}
+
+.table {
+  margin-left: 30% !important;
+}

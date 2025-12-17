@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>capaian pembelajaran dan Tujuan pembelajaran </title>
+    <link rel="stylesheet" href="../style/CP, TP, dan Peta konsep.css">
+</head>
+<body>
+    <script src="../javascript/jskikd.js"></script>
+
+    <header>
+        <a href="../proyek 2.html"> <img src="../img/header.png" class="head1"></a>
+        <img src="../img/logo1.png" class="head2">
+    </header>
+
+    <div class="nav">
+		<div class="pilih">
+			<button class="pilihan tmblAktif" onclick="bukaIsi(event, 'isi1')">CAPAIAN PEMBELAJARAN</button>
+			<button class="pilihan" onclick="bukaIsi(event, 'isi2')">TUJUAN PEMBELAJARAN</button>
+        	<button class="pilihan" onclick="bukaIsi(event, 'isi3')">PETA KONSEP</button>
+		</div>
+	</div>
+
+	<!--KI-->
+	<div class="isi">
+		<div class="isian isiAktif" id="isi1">
+			<center><h1>CAPAIAN PEMBELAJARAN</h1></center><br>
+			<ol>
+                <li>Peserta didik dapat mengonstruksi dan mengurai bangun ruang (kubus, balok, dan gabungannya) dan mengenali visualisasi spasial (bagian depan, atas, dan samping).</li>
+            </ol>
+		</div>
+		<!--KD-->
+		<div class="isian isiAktif" id="isi2">
+			<center><h1>TUJUAN PEMBELAJARAN</h1></center><br>
+			<ol>
+                <li>Membantu peserta didik memahami gambar bangun ruang melalui kegiatan seperti observasi dan komposisi gambar. </li>
+                <li>Mengetahui tentang prisma dan tabung.</li>
+                <li>Dapat menggambar sketsa dan jaring-jaring.</li>
+            </ol>
+		</div>
+		
+		<div class="isian" id="isi3">
+			<center><h1>Peta Konsep</h1><br>
+				<img src="../img/peta konsep.PNG" width="180vh" height="160vh"><br>
+				<button id="petkon" class="petkon" onclick="petkon()"> Perbesar Gambar</button>
+				<div id="myModal" class="modal">
+		    		<div class="modal-content">
+		    			<span class="close">&times;</span>
+		    			<center><img src="../img/peta konsep.PNG"></center>
+		  			</div>
+		  		</div>
+			</center>
+		</div >
+	</div>
+
+    <div class="footer">
+        &copy; 2021 <b>Rapiyah hawa nur (1810131120017)</b>
+    </div>
+</body>
+</html>

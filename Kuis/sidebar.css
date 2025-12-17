@@ -1,0 +1,227 @@
+body {
+  background-image: url(content.png);
+  /* background-size: 1366px 1572px; */
+  background-size: 120%;
+}
+.sidebar .d-flex {
+  border-radius: 6px;
+}
+.sidebar .btn {
+  text-align: left;
+}
+
+.side {
+  padding-left: auto;
+  padding-right: auto;
+}
+
+.btn-toggle {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.65);
+  background-color: transparent;
+  border: 0;
+}
+.btn-toggle:hover,
+.btn-toggle:focus {
+  color: rgba(255, 255, 255, 0.85);
+  background-color: #81a263;
+}
+
+.btn-toggle::before {
+  width: 1.25em;
+  line-height: 0;
+  content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+  transition: transform 0.35s ease;
+  transform-origin: 0.5em 50%;
+  padding-right: 1.5rem;
+}
+.menu-bar .mode .sun-moon {
+  height: 50px;
+  width: 60px;
+}
+
+.menu-bar .bottom-content .toggle-switch {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  min-width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.toggle-switch .switch {
+  position: relative;
+  height: 22px;
+  width: 40px;
+  border-radius: 25px;
+  background-color: var(--toggle-color);
+  transition: var(--tran-05);
+}
+
+.switch::before {
+  content: "";
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  background-color: var(--sidebar-color);
+  transition: var(--tran-04);
+}
+
+body.dark .switch::before {
+  left: 20px;
+}
+
+.home {
+  position: absolute;
+  top: 0;
+  top: 0;
+  left: 250px;
+  height: 100vh;
+  width: calc(100% - 250px);
+  background-color: var(--body-color);
+  transition: var(--tran-05);
+}
+.home .text {
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--text-color);
+  padding: 12px 60px;
+}
+
+.sidebar.close ~ .home {
+  left: 78px;
+  height: 100vh;
+  width: calc(100% - 78px);
+}
+body.dark .home .text {
+  color: var(--text-color);
+}
+
+.btn-toggle[aria-expanded="true"] {
+  color: rgba(255, 255, 255, 0.85);
+}
+.btn-toggle[aria-expanded="true"]::before {
+  transform: rotate(90deg);
+}
+
+.btn-toggle-nav a {
+  display: inline-flex;
+  padding: 0.1875rem 0.5rem;
+  margin-top: 0.125rem;
+  margin-left: 1.25rem;
+  text-decoration: none;
+}
+.btn-toggle-nav a:hover,
+.btn-toggle-nav a:focus,
+.btn-toggle-nav .active {
+  background-color: #81a263;
+}
+
+.scrollarea {
+  overflow-y: auto;
+}
+
+.fw-semibold {
+  font-weight: 600;
+}
+.lh-tight {
+  line-height: 1.25;
+}
+
+.uji-akhir {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 2rem;
+  color: rgba(255, 255, 255, 0.65);
+  background-color: transparent;
+  border: 0;
+  text-decoration: none;
+}
+
+.uji-akhir2 {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 2rem;
+  color: rgba(255, 255, 255, 0.65);
+  background-color: blueviolet;
+  border: 0;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.uji-akhir:hover,
+.uji-akhir:focus {
+  color: rgba(255, 255, 255, 0.85);
+  background-color: #81a263;
+  border-radius: 5px;
+}
+
+/*img*/
+.img {
+  flex-direction: column;
+  justify-content: center;
+  min-width: 800px;
+  min-height: 1100px;
+}
+.imgkar {
+  display: block;
+}
+.imgkar1 {
+  display: none;
+}
+.imgbig {
+  display: flex;
+  max-width: 350px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.imgdir {
+  display: flex;
+  max-width: 600px;
+}
+
+@media only screen and (max-width: 770px) {
+  .imgkar {
+    display: none;
+  }
+  .imgkar1 {
+    display: block;
+    max-width: 120px;
+  }
+  .imgbig {
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    max-width: 200px;
+  }
+  .imgdir {
+    display: flex;
+    max-width: 400px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .imgkar {
+    display: none;
+  }
+  .imgkar1 {
+    display: block;
+    max-width: 90px;
+  }
+  .imgbig {
+    display: flex;
+    max-width: 160px;
+  }
+  .imgdir {
+    display: flex;
+    max-width: 170px;
+  }
+}

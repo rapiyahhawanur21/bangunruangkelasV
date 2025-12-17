@@ -1,0 +1,189 @@
+footer{
+  justify-content: center;
+}
+.table th{
+  background-color: rgb(203, 179, 245);
+  text-align: center;
+}
+.table tr{
+  border-color: #81A263;
+}
+.table .kuning{
+  background-color: rgba(255, 242, 212, 0.889);
+  text-align: center;
+}
+.table .putih{
+  padding-inline-start: 4%;
+  padding-inline-end: 4%;
+  text-align: justify;
+}
+.table{
+  max-width: 80%;
+}
+.inden {
+  text-indent: -45px;
+  margin-left: 45px;
+}
+.percakapan{
+  margin-left: 3%;
+  padding-top: 3%;
+  padding-right: 2%;
+  background-color: blanchedalmond;
+}
+.record{
+  margin-left: 3%;}
+
+.imgkar{
+  margin-top: 30px;
+}
+.satpam{
+    text-align: left;
+    font-size: 14px;
+    background-color: bisque;
+    padding-top: 8px;
+    padding-right:30px;
+    padding-bottom: 8px;
+    padding-left: 15px;
+    border-style: dotted;
+    border-radius: 12px;
+    border-color: #81A263;
+}
+.ellie{
+    text-align: right;
+    font-size: 14px;
+    background-color: azure;
+    padding-top: 8px;
+    padding-right:15px;
+    padding-bottom: 8px;
+    padding-left: 30px;
+    border-style: dotted;
+    border-radius: 12px;
+    border-color: #235789;
+}
+
+.consbox {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 50px;
+    background-color: #e4ddee;
+    padding-top: 15px;
+
+    padding-right: 20px;
+    padding-left: 15px;
+    border-style: dotted;
+    border-radius: 15px;
+    border-color:#51159b #8378e6 #46156d #5e27a2;
+}
+.consboxi{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 30px;
+  background-color: #e4ddee;
+  padding-top: 15px;
+
+  padding-right: 20px;
+  padding-left: 15px;
+  border-style: solid;
+  border-radius: 15px;
+  border-color: #775a99;
+}
+.exercise{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 40px;
+  padding-left: 40px;
+  padding-inline-start: 40px;
+  padding-inline-end: 50px;
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+  
+  border-style: solid;
+  border-radius: 15px;
+  border-color: #351547;
+}
+
+.paragraph{
+  background-color: bisque;
+  padding-top: 8px;
+  padding-right: 10%;
+  padding-bottom: 8px;
+  padding-left: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.paragraph h5{
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+
+.rata{
+  text-align: justify;
+  text-indent: 45px;
+}
+
+.shadow {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.274)!important;
+    border-color:dimgray;
+}
+.shadowi {
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.274)!important;
+}
+
+.consboxii{
+  border: none;
+  background-color: bisque;
+
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+}
+
+.deskripsi{
+  font-size: smaller;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.jeda{
+  padding-right: 30px;
+}
+
+.right{
+  margin-left: 20px;
+}
+
+.borderhitam{
+  border-color: #81A263;
+}
+
+.img-map{
+  max-width: 700px;
+  border: #81A263;
+
+}
+
+.bg-cream{
+  text-align: justify;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 20px;
+  /* background-color: bisque; */
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-inline-start: 10px;
+  padding-bottom: 10px;
+}
+
+.butkanan{
+  flex-direction: row-reverse;
+  display: flex;
+}
+
+.idex{
+  size: 10px;
+}

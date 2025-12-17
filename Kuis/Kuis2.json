@@ -1,0 +1,103 @@
+[
+  
+  {
+    "soal0": {
+      "soal": "Jaring-jaring bangun ruang dari prisma segitiga terdiri dari berapa buah segitiga dan berapa buah persegi panjang....",
+      "a": "2 segitiga dan 3 persegi panjang",
+      "b": "2 segitiga dan 4 persegi panjang",
+      "c": "3 segitiga dan 2 persegi panjang",
+      "d": "1 segitiga dan 5 persegi panjang",
+      "benar": "a"
+    }
+  },
+  {
+    "soal1": {
+      "soal": "Manakah di antara berikut yang merupakan contoh bangun ruang berbentuk prisma....",
+      "a": "Piramida",
+      "b": "Kubus",
+      "c": "Silinder",
+      "d": "Prisma segitiga",
+      "benar": "d"
+    }
+  },
+  {
+    "soal2": {
+      "soal": "Jaring-jaring bangun ruang dari prisma segiempat terdiri dari berapa buah persegi panjang dan berapa buah persegi ....",
+      "a": "4 persegi panjang dan 2 persegi ",
+      "b": "3 persegi panjang dan 2 persegi ",
+      "c": "5 persegi panjang dan 1 persegi ",
+      "d": "2 persegi panjang dan 4 persegi ",
+      "benar": "a"
+    }
+  },
+  {
+    "soal3": {
+      "soal": "Jaring-jaring prisma segilima yang benar adalah....",
+      "a": "<div class='text-center'><img src='img/bebek.jpg' class='w-50'></div>",
+      "b": "<div class='text-center'><img src='img/bebek.jpg' class='w-50'></div>",
+      "c": "<div class='text-center'><img src='img/bebek.jpg' class='w-50'></div>",
+      "d": "<div class='text-center'><img src='img/bebek.jpg' class='w-50'></div>",
+      "benar": "d"
+    }
+  },
+  {
+    "soal4": {
+      "soal": "Jika sebuah jaring-jaring terdiri dari dua segitiga dan tiga persegi panjang, bangun ruang apakah yang terbentuk ....",
+      "a": "Prisma segitiga",
+      "b": "Prisma segiempat",
+      "c": "Prisma segilima",
+      "d": "Prisma segienam",
+      "benar": "a"
+    }
+  },
+  {
+    "soal5": {
+      "soal": "Perhatikan jaring-jaring berikut<br><div class='text-center'><img src='img/bebek.jpg' class='w-50'></div>Bangun ruang yang terbentuk dari jaring-jaring diatas adalah ....",
+      "a": "Prisma segitiga",
+      "b": "Prisma segiempat",
+      "c": "Prisma segilima",
+      "d": "Prisma segienam",
+      "benar": "a"
+    }
+  },
+  {
+    "soal6": {
+      "soal": "Perhatikan Langkah-langkah membuat sketsa berikut.<ol><li>Gambar sebuah segitiga di bagian bawah kertas. Ini akan menjadi alas pertama dari prisma</li><li>Gambar segitiga kedua yang sama persis dengan alas pertama, tetapi sedikit di atas dan bergeser ke satu sisi. Pastikan kedua alas ini sejajar.</li><li>Hubungkan setiap sudut alas pertama dengan sudut yang sesuai pada alas kedua dengan garis lurus. Ini akan membentuk sisi-sisi tegak dari prisma.</li></ol>Langkah-langkah tersebut untuk membuat bangun ruang berbentuk.....",
+      "a": "Prisma segitiga",
+      "b": "Prisma segiempat",
+      "c": "Prisma segilima",
+      "d": "Prisma segienam",
+      "benar": "a"
+    }
+  },
+  {
+    "soal7": {
+      "soal": "Perhatikan sketsa berikut!<br><div class='text-center'><img src='img/bebek.jpg' class='w-50'></div>Bangun ruang apakah yang dapat dibentuk dari sketsa diatas  ....",
+      "a": "Prisma segitiga",
+      "b": "Prisma segiempat",
+      "c": "Prisma segilima",
+      "d": "Prisma segienam",
+      "benar": "b"
+    }
+  },
+  {
+    "soal8": {
+      "soal": "Jaring-jaring bangun ruang dari prisma segienam terdiri dari berapa buah persegi panjang dan berapa buah segienam ….....",
+      "a": "6 persegi panjang dan 2 segienam ",
+      "b": "5 persegi panjang dan 1 segienam",
+      "c": "4 persegi panjang dan 3 segienam",
+      "d": "3 persegi panjang dan 4 segienam",
+      "benar": "a"
+    }
+  },
+  {
+    "soal9": {
+      "soal": "Perhatikan gambar kotak hadiah dibawah ini<br><div class='text-center'><img src='img/bebek.jpg' class='w-50'></div>Jaring-jaring kotak hadiah diatas yang benar adalah  ....",
+      "a": "<div class='text-center'><img src='img/bebek.jpg' class='w-50'></div>",
+      "b": "<div class='text-center'><img src='img/bebek.jpg' class='w-50'></div>",
+      "c": "<div class='text-center'><img src='img/bebek.jpg' class='w-50'></div>",
+      "d": "<div class='text-center'><img src='img/bebek.jpg' class='w-50'></div>",
+      "benar": "b"
+    }
+  }
+]
